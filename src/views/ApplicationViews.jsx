@@ -18,7 +18,7 @@ function ApplicationViews() {
                 path="/"
                 element={
                     <>
-                    <NavBar />
+                    {/* <NavBar /> */}
                     <Outlet />
                     </>
                 }
