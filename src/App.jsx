@@ -1,19 +1,21 @@
 import { Routes, Route } from "react-router-dom"
 import "./App.css";
-import AllPlants from "./components/Plants/AllPlants";
 import ApplicationViews from "./views/ApplicationViews";
+import Login from "./auth/Login";
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <Routes>
+      <Route path="/login" element={<Login />} />
+
       <Route
         path="*"
         element={
-          <Authorized>
+          // <Authorized>
             <ApplicationViews />
-          </Authorized>
+          // </Authorized>
         }
       />
     </Routes>
