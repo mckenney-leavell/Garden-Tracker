@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom"
 import "./App.css";
 import ApplicationViews from "./views/ApplicationViews";
 import Login from "./auth/Login";
+import { Authorized } from "./views/Authorized";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -13,9 +14,9 @@ function App() {
       <Route
         path="*"
         element={
-          // <Authorized>
+          <Authorized>
             <ApplicationViews />
-          // </Authorized>
+          </Authorized>
         }
       />
     </Routes>
