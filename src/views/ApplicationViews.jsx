@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, Outlet } from "react-router-dom"
 import AllPlants from "../components/Plants/AllPlants";
+import NavBar from "../components/nav/NavBar";
 
 function ApplicationViews() {
     const [currentUser, setCurrentUser] = useState({});
@@ -18,7 +19,7 @@ function ApplicationViews() {
                 path="/"
                 element={
                     <>
-                    {/* <NavBar /> */}
+                    <NavBar />
                     <Outlet />
                     </>
                 }
