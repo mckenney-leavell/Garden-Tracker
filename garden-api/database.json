@@ -213,6 +213,87 @@
       "companionPlants": "cosmos, sunflowers",
       "imageURL": "https://hgtvhome.sndimg.com/content/dam/images/grdn/fullset/2013/3/5/0/0514_074.jpg.rend.hgtvcom.1280.960.85.suffix/1452644567362.webp",
       "creatorId": null
+    },
+    {
+      "name": "Brussels Sprouts",
+      "plantTypeId": 1,
+      "earliestIndoorStartDate": "",
+      "latestIndoorStartDate": "",
+      "springEarliestOutdoorStartDate": "",
+      "springLatestOutdoorStartDate": "",
+      "fallEarliestOutdoorStartDate": "2025-08-04",
+      "fallLatestOutdoorStartDate": "2025-09-06",
+      "lastDateToPlant": "",
+      "averageDaysToMature": 21,
+      "useStart": false,
+      "companionPlants": null,
+      "imageURL": "www.brusselssproutsimage.com",
+      "id": 12
+    },
+    {
+      "name": "Onion",
+      "plantTypeId": 1,
+      "earliestIndoorStartDate": "2025-09-10",
+      "latestIndoorStartDate": "2025-09-18",
+      "springEarliestOutdoorStartDate": "",
+      "springLatestOutdoorStartDate": "",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "",
+      "averageDaysToMature": 40,
+      "useStart": false,
+      "companionPlants": null,
+      "imageURL": "www.onion.com",
+      "creatorId": 1,
+      "id": 13
+    },
+    {
+      "name": "Onion",
+      "plantTypeId": 1,
+      "earliestIndoorStartDate": "",
+      "latestIndoorStartDate": "",
+      "springEarliestOutdoorStartDate": "2025-09-04",
+      "springLatestOutdoorStartDate": "2025-09-18",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "",
+      "averageDaysToMature": 35,
+      "useStart": false,
+      "companionPlants": null,
+      "imageURL": "www.onion.com",
+      "id": 14
+    },
+    {
+      "name": "Onion",
+      "plantTypeId": 1,
+      "earliestIndoorStartDate": "",
+      "latestIndoorStartDate": "",
+      "springEarliestOutdoorStartDate": "2025-09-02",
+      "springLatestOutdoorStartDate": "2025-09-30",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "",
+      "averageDaysToMature": 0,
+      "useStart": false,
+      "companionPlants": null,
+      "imageURL": "www.onion.com",
+      "id": 15
+    },
+    {
+      "name": "onion",
+      "plantTypeId": 3,
+      "earliestIndoorStartDate": "",
+      "latestIndoorStartDate": "",
+      "springEarliestOutdoorStartDate": "",
+      "springLatestOutdoorStartDate": "",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "",
+      "averageDaysToMature": 0,
+      "useStart": false,
+      "companionPlants": null,
+      "imageURL": "website ex",
+      "id": 16
     }
   ],
   "plantTypes": [
@@ -254,6 +335,10 @@
       "plantId": 1,
       "userId": 1,
       "id": 5
+    },
+    {
+      "userId": 1,
+      "id": 6
     }
   ],
   "plantingSeason": [

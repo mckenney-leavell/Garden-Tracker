@@ -3,6 +3,7 @@ import { Routes, Route, Outlet } from "react-router-dom"
 import AllPlants from "../components/plants/AllPlants";
 import NavBar from "../components/nav/NavBar";
 import { MyGarden } from "../components/plants/MyGarden";
+import CreatePlant from "../components/plants/CreatePlant";
 
 function ApplicationViews() {
     const [currentUser, setCurrentUser] = useState({});
@@ -26,7 +27,8 @@ function ApplicationViews() {
                 }
             >
                 <Route index element={<AllPlants currentUser={currentUser}/>} />
-                <Route path="my-garden" element={<MyGarden currentUser={currentUser}/>}/>
+                <Route path="my-garden" element={<MyGarden currentUser={currentUser} />} />
+                <Route path="create" element={<CreatePlant currentUser={currentUser} />} />
             </Route>
         </Routes>
     )   
