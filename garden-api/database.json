@@ -249,6 +249,11 @@
       "plantId": 6,
       "userId": 1,
       "id": 4
+    },
+    {
+      "plantId": 1,
+      "userId": 1,
+      "id": 5
     }
   ],
   "plantingSeason": [
