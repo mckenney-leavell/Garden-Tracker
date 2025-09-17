@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { allPlantService } from "../../services/plantService";
 import Plant from "./Plant";
 
-function AllPlants() {
+function AllPlants( {currentUser } ) {
   const [allPlants, setAllPlants] = useState([]);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ function AllPlants() {
       <h1>All Plants</h1>
       <article className="plants">
         {allPlants.map((plantObj) => {
-          return <Plant plant={plantObj} key={plantObj.id} />;
+          return <Plant plant={plantObj} currentUser={currentUser} key={plantObj.id} />;
         })}
       </article>
     </div>
