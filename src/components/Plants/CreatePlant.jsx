@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import { createPlantService, plantTypeService } from "../../services/plantService";
 import "react-datepicker/dist/react-datepicker.css"
+import { useNavigate } from "react-router-dom";
 
 function CreatePlant( {currentUser} ) {
     const [allTypes, setAllTypes] = useState([])
@@ -31,16 +32,7 @@ function CreatePlant( {currentUser} ) {
         creatorId: currentUser.id
     })
 
-    // const handleSaveToGarden = () => {
-    //     const savedCreatedPlant = {
-    //         plantId: plant.id,
-    //         userId: currentUser?.id
-    //     }
-
-    //     savePlantToGarden(savedCreatedPlant).then(() => {
-    //         console.log("Post Saved: ", savedCreatedPlant)
-    //     })
-    // }
+    const navigate = useNavigate()
 
     useEffect(() => {
         const allTypesService = plantTypeService()
@@ -54,9 +46,8 @@ function CreatePlant( {currentUser} ) {
 
         if (plant.name && plant.plantTypeId && plant.imageURL) {
             createPlantService(plant).then(() => {
-                console.log("New plant:", plant)
+                navigate("/profile")
             })
-            // handleSaveToGarden()
 
         } else {
             window.alert("Please include a plant name, type, and image URL")
