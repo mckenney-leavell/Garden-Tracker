@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import { getUserById } from "../../services/userService";
 import { allPlantService } from "../../services/plantService";
 import UserCreatedPlants from "../plants/UserPlants";
+import { useNavigate } from "react-router-dom";
 
 function Profile({ currentUser }) {
 
     const [user, setUser] = useState({})
     const [createdPlants, setCreatedPlants] = useState([])
+
+    const navigate = useNavigate()
 
     const getAndSetCreatedPlants = () => {
         allPlantService().then((plantsArr) => {
@@ -14,6 +17,8 @@ function Profile({ currentUser }) {
             setCreatedPlants(userCreatedPlants)
         })     
     }
+
+    const navEditProfile = () => navigate("/profile/edit-profile")
 
     useEffect(() => {
         if (currentUser && currentUser.id) {
@@ -34,7 +39,7 @@ function Profile({ currentUser }) {
             <h2>Profile Information</h2>
             <div>Name: {user.name}</div>
             <div>Email: {user.email}</div>
-            <button>Edit Profile</button>
+            <button onClick={navEditProfile}>Edit Profile</button>
             <div className="created-plants">
                 <h2>Created Plants</h2>
                 {createdPlants.map((plant) => {
