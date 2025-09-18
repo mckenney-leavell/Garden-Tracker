@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getUserById } from "../../services/userService";
 import { allPlantService } from "../../services/plantService";
 import UserCreatedPlants from "../plants/userPlants";
+// import UserCreatedPlants from "../plants/UserPlants";
 
 function Profile({ currentUser }) {
     // if currentUser.id === user.id, then display the email, name, and plants the user created
