@@ -54,7 +54,7 @@ function CreatePlant( {currentUser} ) {
 
         if (plant.name && plant.plantTypeId && plant.imageURL) {
             createPlantService(plant).then(() => {
-                console.log("New post:", plant)
+                console.log("New plant:", plant)
             })
             // handleSaveToGarden()
 
