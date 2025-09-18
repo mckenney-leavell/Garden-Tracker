@@ -247,6 +247,23 @@
       "imageURL": "www.brusselssprouts.com",
       "creatorId": 1,
       "id": 13
+    },
+    {
+      "name": "Fake Plant",
+      "plantTypeId": 2,
+      "earliestIndoorStartDate": "",
+      "latestIndoorStartDate": "",
+      "springEarliestOutdoorStartDate": "",
+      "springLatestOutdoorStartDate": "",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "",
+      "averageDaysToMature": 0,
+      "useStart": false,
+      "companionPlants": null,
+      "imageURL": "www.fakeplant.org",
+      "creatorId": 1,
+      "id": 14
     }
   ],
   "plantTypes": [
