@@ -4,6 +4,7 @@ import AllPlants from "../components/plants/AllPlants";
 import NavBar from "../components/nav/NavBar";
 import { MyGarden } from "../components/plants/MyGarden";
 import CreatePlant from "../components/plants/CreatePlant";
+import Profile from "../components/user/Profile";
 
 function ApplicationViews() {
     const [currentUser, setCurrentUser] = useState({});
@@ -29,6 +30,7 @@ function ApplicationViews() {
                 <Route index element={<AllPlants currentUser={currentUser}/>} />
                 <Route path="my-garden" element={<MyGarden currentUser={currentUser} />} />
                 <Route path="create" element={<CreatePlant currentUser={currentUser} />} />
+                <Route path="profile" element={<Profile currentUser={currentUser} />} />
             </Route>
         </Routes>
     )   
