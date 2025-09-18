@@ -48,6 +48,6 @@ button {
     transition: background-color 0.2s;
 }
 
-.save-to-garden-btn:hover {
+button:hover {
     background-color: #717744;
 }

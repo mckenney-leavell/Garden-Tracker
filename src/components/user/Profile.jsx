@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getUserById } from "../../services/userService";
 import { allPlantService } from "../../services/plantService";
+import UserCreatedPlants from "../plants/userPlants";
 
 function Profile({ currentUser }) {
     // if currentUser.id === user.id, then display the email, name, and plants the user created
@@ -17,15 +18,13 @@ function Profile({ currentUser }) {
         }
     }, [currentUser])
 
-    const getAllPlants = () => {
+    useEffect(() => {
         allPlantService().then((plantsArr) => {
             setAllPlants(plantsArr)
+        const userCreatedPlants = allPlants.filter((plant) => plant.creatorId === user.id)
+        setCreatedPlants(userCreatedPlants)
         })
-    }
-
-    // useEffect(() => {
-
-    // })
+    }, [allPlants, user])
 
     return (
         <div className="profile-info">
@@ -36,6 +35,9 @@ function Profile({ currentUser }) {
             <button>Edit Profile</button>
             <div className="created-plants">
                 <h2>Created Plants</h2>
+                {createdPlants.map((plant) => {
+                    return <UserCreatedPlants plant={plant} key={plant.id}/>
+                })}
             </div>
         </div>
     )

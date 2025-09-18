@@ -2,7 +2,7 @@
 // create post service for created plant
 import { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
-import { createPlantService, plantTypeService, savePlantToGarden } from "../../services/plantService";
+import { createPlantService, plantTypeService } from "../../services/plantService";
 import "react-datepicker/dist/react-datepicker.css"
 
 function CreatePlant( {currentUser} ) {
@@ -28,7 +28,7 @@ function CreatePlant( {currentUser} ) {
         useStart: false,
         companionPlants: null,
         imageURL: "",
-        creatorId: currentUser?.id
+        creatorId: currentUser.id
     })
 
     // const handleSaveToGarden = () => {
