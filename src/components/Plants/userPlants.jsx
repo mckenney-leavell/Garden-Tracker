@@ -1,8 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import "./Plant.css"
+import { deletePlantService } from "../../services/plantService";
 
-function UserCreatedPlants( {plant} ) {
+function UserCreatedPlants({ plant, getAndSetCreatedPlants }) {
     const navigate = useNavigate()
+
+    const navToEditPlant = () => {
+            navigate(`/profile/edit-plant/${plant.id}`)
+    }
+
+    const handlePlantDelete = () => {
+        deletePlantService(plant.id).then(() => {
+            getAndSetCreatedPlants()
+        })
+    }
 
     return (
             <section className="plant">
@@ -11,8 +22,8 @@ function UserCreatedPlants( {plant} ) {
             </div>
             <div className="plant-info">
                 <div>{plant.name}</div>
-                <button onClick={} className="edit-btn">Edit</button>
-                <button className="delete-btn">Delete</button>                
+                <button key={plant.id} onClick={navToEditPlant} className="edit-btn">Edit</button>
+                <button className="delete-btn" onClick={handlePlantDelete}>Delete</button>              
             </div>
         </section>
     )

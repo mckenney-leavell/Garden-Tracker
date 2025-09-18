@@ -232,7 +232,7 @@
       "id": 12
     },
     {
-      "name": "Brussels Sprouts",
+      "name": "Brussels Sprout",
       "plantTypeId": 1,
       "earliestIndoorStartDate": "",
       "latestIndoorStartDate": "",
@@ -244,7 +244,7 @@
       "averageDaysToMature": 0,
       "useStart": false,
       "companionPlants": null,
-      "imageURL": "www.brussels.com",
+      "imageURL": "www.brusselssprouts.com",
       "creatorId": 1,
       "id": 13
     }

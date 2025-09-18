@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
 import { getUserById } from "../../services/userService";
 import { allPlantService } from "../../services/plantService";
-import UserCreatedPlants from "../plants/userPlants";
-// import UserCreatedPlants from "../plants/UserPlants";
+import UserCreatedPlants from "../plants/UserPlants";
 
 function Profile({ currentUser }) {
-    // if currentUser.id === user.id, then display the email, name, and plants the user created
+
     const [user, setUser] = useState({})
-    const [allPlants, setAllPlants] = useState([])
     const [createdPlants, setCreatedPlants] = useState([])
+
+    const getAndSetCreatedPlants = () => {
+        allPlantService().then((plantsArr) => {
+            const userCreatedPlants = plantsArr.filter((plant) => plant.creatorId === user.id)
+            setCreatedPlants(userCreatedPlants)
+        })     
+    }
 
     useEffect(() => {
         if (currentUser && currentUser.id) {
@@ -20,12 +25,8 @@ function Profile({ currentUser }) {
     }, [currentUser])
 
     useEffect(() => {
-        allPlantService().then((plantsArr) => {
-            setAllPlants(plantsArr)
-        const userCreatedPlants = allPlants.filter((plant) => plant.creatorId === user.id)
-        setCreatedPlants(userCreatedPlants)
-        })
-    }, [allPlants, user])
+        getAndSetCreatedPlants()
+    }, [user])
 
     return (
         <div className="profile-info">
@@ -37,7 +38,7 @@ function Profile({ currentUser }) {
             <div className="created-plants">
                 <h2>Created Plants</h2>
                 {createdPlants.map((plant) => {
-                    return <UserCreatedPlants plant={plant} key={plant.id}/>
+                    return <UserCreatedPlants plant={plant} key={plant.id} getAndSetCreatedPlants={getAndSetCreatedPlants}/>
                 })}
             </div>
         </div>
