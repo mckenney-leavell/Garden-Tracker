@@ -1,28 +1,20 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getPlantById, getPlantTypeById } from "../../services/plantService";
+import { getPlantTypeById } from "../../services/plantService";
 import "./Plant.css"
 
 function PlantDetails() {
     const [plant, setPlant] = useState({})
-    // const [plantType, setPlantType] = useState([])
     const { id } = useParams()
 
    
 
     useEffect(() => {
         getPlantTypeById(id).then((data) => {
-            // const plantObj = data[0]
             console.log("data value: ", data)
             setPlant(data)
         })
     }, [id])
-
-    // useEffect(() => {
-    //     getPlantTypeById(id).then((data => {
-    //         console.log("Data object:", data)
-    //     }))
-    // }, [id])
 
     const getMonthAndDate = (x) => {
         const shortenedDate = x.slice(5)

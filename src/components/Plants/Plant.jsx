@@ -3,9 +3,6 @@ import { savePlantToGarden } from "../../services/plantService";
 import { Link } from "react-router-dom";
 
 function Plant( {plant, currentUser} ) {
-    // handle save
-    // object with id, currentUser.id, and plant.id
-    // save object to database using savePlantToGarden()
     const handleSaveToGarden = () => {
         const savedPost = {
             plantId: plant.id,
