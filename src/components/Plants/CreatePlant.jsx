@@ -25,7 +25,7 @@ function CreatePlant( {currentUser} ) {
         fallEarliestOutdoorStartDate: "",
         fallLatestOutdoorStartDate: "",
         lastDateToPlant: "",
-        averageDaysToMature: 0,
+        averageDaysToMature: null,
         useStart: false,
         companionPlants: null,
         imageURL: "",

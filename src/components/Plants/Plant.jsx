@@ -1,10 +1,8 @@
 import "./Plant.css"
 import { savePlantToGarden } from "../../services/plantService";
+import { Link } from "react-router-dom";
 
 function Plant( {plant, currentUser} ) {
-    // handle save
-    // object with id, currentUser.id, and plant.id
-    // save object to database using savePlantToGarden()
     const handleSaveToGarden = () => {
         const savedPost = {
             plantId: plant.id,
@@ -18,11 +16,13 @@ function Plant( {plant, currentUser} ) {
 
     return (
         <section className="plant">
-            <div className="plant-image">
-                <img src={plant.imageURL} alt={plant.name}/>
-            </div>
+            <Link to={`/plants/plant-details/${plant.id}`} >
+                <div className="plant-image">
+                    <img src={plant.imageURL} alt={plant.name}/>
+                </div>
+            </Link>
             <div className="plant-info">
-                <div>{plant.name}</div>
+                <div>{plant.name}</div>            
                 <button 
                     className="save-to-garden-btn"
                     value={plant.id}
