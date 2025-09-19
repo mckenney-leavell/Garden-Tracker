@@ -165,7 +165,7 @@ function Editplant() {
                     />
                 </fieldset>      
                 <fieldset>
-                    <label>Using starter plant recommended? </label>
+                    <label>Starter plant recommended? </label>
                     <input 
                         label="starterPlant"                         
                         type="checkbox"

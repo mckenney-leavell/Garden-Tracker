@@ -6,7 +6,7 @@ function UserCreatedPlants({ plant, getAndSetCreatedPlants }) {
     const navigate = useNavigate()
 
     const navToEditPlant = () => {
-            navigate(`/profile/edit-plant/${plant.id}`)
+            navigate(`/plants/edit-plant/${plant.id}`)
     }
 
     const handlePlantDelete = () => {

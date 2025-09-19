@@ -14,6 +14,10 @@ export const getPlantById = (id) => {
     return fetch (`http://localhost:8088/plants?id=${id}`).then(res => res.json())
 }
 
+export const getPlantTypeById = (id) => {
+    return fetch (`http://localhost:8088/plants/${id}?_expand=plantType`).then(res => res.json())
+}
+
 export const savePlantToGarden = (savedPlant) => {
     return fetch ("http://localhost:8088/savedPlant", {
         method: "POST",
