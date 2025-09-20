@@ -18,6 +18,10 @@ export const getPlantTypeById = (id) => {
     return fetch (`http://localhost:8088/plants/${id}?_expand=plantType`).then(res => res.json())
 }
 
+export const getSavedPlantById = (id) => {
+    return fetch (`http://localhost:8088/savedPlant/${id}`).then(res => res.json())
+}
+
 export const savePlantToGarden = (savedPlant) => {
     return fetch ("http://localhost:8088/savedPlant", {
         method: "POST",
@@ -50,6 +54,12 @@ export const updatePlantService = (plant) => {
 
 export const deletePlantService = (plantId) => {
     return fetch (`http://localhost:8088/plants/${plantId}`, {
+        method: "DELETE"
+    })
+}
+
+export const deleteSavedPlantService = (plantId) => {
+    return fetch (`http://localhost:8088/savedPlant/${plantId}`, {
         method: "DELETE"
     })
 }

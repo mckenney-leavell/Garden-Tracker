@@ -215,7 +215,7 @@
       "creatorId": null
     },
     {
-      "name": "Onion",
+      "name": "test plant",
       "plantTypeId": 2,
       "earliestIndoorStartDate": "",
       "latestIndoorStartDate": "",
@@ -226,8 +226,8 @@
       "lastDateToPlant": "",
       "averageDaysToMature": null,
       "useStart": false,
-      "companionPlants": "",
-      "imageURL": "www.onion.url",
+      "companionPlants": null,
+      "imageURL": "fakeurl.com",
       "creatorId": 1,
       "id": 12
     }
@@ -248,11 +248,6 @@
   ],
   "savedPlant": [
     {
-      "id": 1,
-      "plantId": 3,
-      "userId": 1
-    },
-    {
       "id": 2,
       "plantId": 6,
       "userId": 2
@@ -270,11 +265,6 @@
     {
       "plantId": 1,
       "userId": 1,
-      "id": 5
-    },
-    {
-      "plantId": 1,
-      "userId": 1,
       "id": 6
     },
     {
@@ -286,6 +276,11 @@
       "plantId": 4,
       "userId": 1,
       "id": 8
+    },
+    {
+      "plantId": 9,
+      "userId": 1,
+      "id": 10
     }
   ],
   "plantingSeason": [

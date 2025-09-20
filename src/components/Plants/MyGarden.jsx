@@ -5,19 +5,18 @@ import SavedPlant from "./SavedPlant";
 export const MyGarden = ( {currentUser} ) => {
     const [userSavedPlants, setUserSavedPlants] = useState([])
 
-    useEffect(() => {
-        console.log("useEffect running, currentUser is:", currentUser)
-        
+    const getAndSetSavedPlants = () => {
         if (!currentUser || !currentUser.id) {
-            console.log("Skipping API call - user not ready")
             return
-        }
-        
-        console.log("Making API call with user ID:", currentUser.id)
+        } 
         savedPlantsService(currentUser.id)
             .then((plantArr) => {
                 setUserSavedPlants(plantArr)
             })
+    }
+
+    useEffect(() => {
+        getAndSetSavedPlants()
     }, [currentUser])
 
     return (
@@ -25,7 +24,7 @@ export const MyGarden = ( {currentUser} ) => {
             <h1>My Garden</h1>
             <article className="saved-plants">
                 {userSavedPlants.map((savedPlantObj) => {
-                    return <SavedPlant plant={savedPlantObj} key={savedPlantObj.id} />
+                    return <SavedPlant getAndSetSavedPlants={getAndSetSavedPlants} plant={savedPlantObj} key={savedPlantObj.id} />
                 })}
             </article>
         </div>
