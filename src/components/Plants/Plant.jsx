@@ -1,16 +1,36 @@
 import "./Plant.css"
-import { savePlantToGarden } from "../../services/plantService";
+import { savedPlantsService, savePlantToGarden } from "../../services/plantService";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function Plant( {plant, currentUser} ) {
+    // if there is a saved plant object with the current user id and plant id, save button is not visible
+    // create useState for current savedPlantObj
+    const [currentSavedPlant, setCurrentSavedPlant] = useState({})
+
+    useEffect(() => {
+        if (!currentUser || !currentUser.id) {
+            return
+        } 
+        savedPlantsService(currentUser.id).then((savedPlantArr) => {
+            console.log("What type is this?", typeof savedPlantArr)
+            console.log("Raw data from API:", savedPlantArr) // Add this line
+            const savedPlantObj = savedPlantArr.filter((plantObj) => {
+                return plantObj.plantId === plant.id
+            })
+            setCurrentSavedPlant(savedPlantObj)
+            console.log("Saved plant object:", savedPlantObj)
+        })
+    }, [currentUser, plant])
+
     const handleSaveToGarden = () => {
-        const savedPost = {
+        const savedPlant = {
             plantId: plant.id,
             userId: currentUser.id
         }
 
-        savePlantToGarden(savedPost).then(() => {
-            console.log("Post Saved: ", savedPost)
+        savePlantToGarden(savedPlant).then(() => {
+            console.log("Plant Saved: ", savedPlant)
         })
     }
 
