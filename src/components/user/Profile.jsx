@@ -3,11 +3,14 @@ import { getUserById } from "../../services/userService";
 import { allPlantService } from "../../services/plantService";
 import UserCreatedPlants from "../plants/UserPlants";
 import { useNavigate } from "react-router-dom";
+import SearchBar from "../SearchBar";
 
 function Profile({ currentUser }) {
 
     const [user, setUser] = useState({})
     const [createdPlants, setCreatedPlants] = useState([])
+    const [getSearchInput, setSearchInput] = useState("")
+    const [filteredPlants, setFilteredPlants] = useState([])
 
     const navigate = useNavigate()
 
@@ -33,6 +36,18 @@ function Profile({ currentUser }) {
         getAndSetCreatedPlants()
     }, [user])
 
+    useEffect(() => {
+        if (getSearchInput.length > 0) {
+            const foundPlants = createdPlants.filter((plantObj) =>
+                plantObj.name.toLowerCase().includes(getSearchInput.toLowerCase())
+            )
+            setFilteredPlants(foundPlants)
+        } 
+        else {
+            setFilteredPlants(createdPlants)
+        }
+  }, [createdPlants, getSearchInput])
+
     return (
         <div className="profile-info">
             <h1>My Profile</h1>
@@ -42,7 +57,8 @@ function Profile({ currentUser }) {
             <button onClick={navEditProfile}>Edit Profile</button>
             <div className="created-plants">
                 <h2>Created Plants</h2>
-                {createdPlants.map((plant) => {
+                <SearchBar getSearchInput={getSearchInput} setSearchInput={setSearchInput}/>
+                {filteredPlants.map((plant) => {
                     return <UserCreatedPlants plant={plant} key={plant.id} getAndSetCreatedPlants={getAndSetCreatedPlants}/>
                 })}
             </div>

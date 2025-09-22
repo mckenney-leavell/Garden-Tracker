@@ -22,6 +22,10 @@ export const getSavedPlantById = (id) => {
     return fetch (`http://localhost:8088/savedPlant/${id}`).then(res => res.json())
 }
 
+export const getPlantGrowingSeasons = () => {
+    return fetch ("http://localhost:8088/plantingSeason").then(res => res.json())
+}
+
 export const savePlantToGarden = (savedPlant) => {
     return fetch ("http://localhost:8088/savedPlant", {
         method: "POST",
