@@ -9,7 +9,6 @@ function SavedPlant({ plant, getAndSetSavedPlants }) {
     useEffect(() => {
         getSavedPlantById(plant.id).then((plantObj) => {
             setSavedPlant(plantObj)
-            // console.log("Plant object to delete: ", plantObj)
         })
     }, [plant])
 
