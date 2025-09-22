@@ -5,47 +5,47 @@ function NavBar() {
 	const navigate = useNavigate()
 	return (
 		<ul className="nav-bar">
-			<li>
+			<li className="navbar-item">
 				<Link
 					to="/"
-					className="navbar-item"
+					
 				>
 					All Plants
 				</Link>
 			</li>
-			<li>
+			<li className="navbar-item">
 				<Link
 					to="/my-garden"
-					className="navbar-item"
+					
 				>
 					My Garden
 				</Link>
 			</li>
-			<li>
+			<li className="navbar-item">
 				<Link
 					to="/create"
-					className="navbar-item"
+					
 				>
 					Create Plant
 				</Link>
 			</li>
-			<li>
+			<li className="navbar-item">
 				<Link
 					to="/profile"
-					className="navbar-item"
+					
 				>
 					Profile
 				</Link>
 			</li>
 			{localStorage.getItem("plant_user") ? (
-				<li className="navbar-logout">
+				<li className="navbar-item">
 					<Link
 						to=""
 						onClick={() => {
 							localStorage.removeItem("plant_user")
 							navigate("/", { replace: true })
 						}}
-						className="navbar-link"
+						// className="navbar-link"
 					>
 						Logout
 					</Link>

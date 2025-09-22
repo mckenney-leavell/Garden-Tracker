@@ -1,3 +1,4 @@
+import "./AllPlants.css"
 import { useEffect, useState } from "react";
 import { savedPlantsService } from "../../services/plantService";
 import SavedPlant from "./SavedPlant";
