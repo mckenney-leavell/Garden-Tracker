@@ -8,14 +8,8 @@ import { useNavigate } from "react-router-dom";
 
 function CreatePlant( {currentUser} ) {
     const [allTypes, setAllTypes] = useState([])
-    const [earliestIndoorStartDate, setEarliestIndoorStartDate] = useState("")
-    const [latestIndoorStartDate, setLatestIndoorStartDate] = useState("")
-    const [earliestSpringStartDate, setEarliestSpringStartDate] = useState("")     
-    const [latestSpringStartDate, setLatestSpringStartDate] = useState("")  
-    const [earliestFallStartDate, setEarliestFallStartDate] = useState("") 
-    const [latestFallStartDate, setLatestFallStartDate] = useState("") 
-    const [lastDateToPlant, setLastDateToPlant] = useState("")       
-    const [plant, setPlant] = useState({
+          
+    const [plantObj, setPlantObj] = useState({
         name: "",
         plantTypeId: 0,
         earliestIndoorStartDate: "",
@@ -44,8 +38,8 @@ function CreatePlant( {currentUser} ) {
     const handleSavePlant = (event) => {
         event.preventDefault()
 
-        if (plant.name && plant.plantTypeId && plant.imageURL) {
-            createPlantService(plant).then(() => {
+        if (plantObj.name && plantObj.plantTypeId && plantObj.imageURL) {
+            createPlantService(plantObj).then(() => {
                 navigate("/profile")
             })
 
@@ -63,9 +57,9 @@ function CreatePlant( {currentUser} ) {
                     type="text"
                     placeholder="Type here"
                     onChange={(event) => {
-                        const plantCopy = { ...plant }
+                        const plantCopy = { ...plantObj }
                         plantCopy.name = event.target.value
-                        setPlant(plantCopy)
+                        setPlantObj(plantCopy)
                     }}
                 />
             </fieldset>
@@ -73,9 +67,9 @@ function CreatePlant( {currentUser} ) {
                 <label>Plant Type: </label>
                 <select
                     onChange={(event) => {
-                        const plantCopy = { ...plant };
+                        const plantCopy = { ...plantObj };
                         plantCopy.plantTypeId = parseInt(event.target.value)
-                        setPlant(plantCopy);
+                        setPlantObj(plantCopy);
                 }}>
                     <option value="null" className="type-option">Select Type</option>
                     {allTypes.map((type) => (
@@ -85,78 +79,71 @@ function CreatePlant( {currentUser} ) {
                     ))}
                 </select>
             </fieldset>
-            <fieldset>
-                <label>Earliest Indoor Start Date: </label>
-                <DatePicker selected={earliestIndoorStartDate} onChange={ (date) => {
-                    setEarliestIndoorStartDate(date)
-                    const plantCopy = { ...plant };
-                    plantCopy.earliestIndoorStartDate = date.toISOString().split('T')[0]
-                    setPlant(plantCopy);
-                }} />
-            </fieldset>
-            <fieldset>
-                <label>Latest Indoor Start Date: </label>
-                <DatePicker selected={latestIndoorStartDate} onChange={ (date) => {
-                    setLatestIndoorStartDate(date)
-                    const plantCopy = { ...plant };
-                    plantCopy.latestIndoorStartDate = date.toISOString().split('T')[0]
-                    setPlant(plantCopy);
-                }} />
-            </fieldset>
-             <fieldset>
-                <label>Earliest Spring Start Date: </label>
-                <DatePicker selected={earliestSpringStartDate} onChange={ (date) => {
-                    setEarliestSpringStartDate(date)
-                    const plantCopy = { ...plant };
-                    plantCopy.springEarliestOutdoorStartDate = date.toISOString().split('T')[0]
-                    setPlant(plantCopy);
-                }} />
-            </fieldset>
-            <fieldset>
-                <label>Latest Spring Start Date: </label>
-                <DatePicker selected={latestSpringStartDate} onChange={ (date) => {
-                    setLatestSpringStartDate(date)
-                    const plantCopy = { ...plant };
-                    plantCopy.springLatestOutdoorStartDate = date.toISOString().split('T')[0]
-                    setPlant(plantCopy);
-                }} />
-            </fieldset>
-            <fieldset>
-                <label>Earliest Fall Start Date: </label>
-                <DatePicker selected={earliestFallStartDate} onChange={ (date) => {
-                    setEarliestFallStartDate(date)
-                    const plantCopy = { ...plant };
-                    plantCopy.fallEarliestOutdoorStartDate = date.toISOString().split('T')[0]
-                    setPlant(plantCopy);
-                }} />
-            </fieldset>   
-            <fieldset>
-                <label>Latest Fall Start Date: </label>
-                <DatePicker selected={latestFallStartDate} onChange={ (date) => {
-                    setLatestFallStartDate(date)
-                    const plantCopy = { ...plant };
-                    plantCopy.fallLatestOutdoorStartDate = date.toISOString().split('T')[0]
-                    setPlant(plantCopy);
-                }} />
-            </fieldset>  
-            <fieldset>
-                <label>Last Date to Plant: </label>
-                <DatePicker selected={lastDateToPlant} onChange={ (date) => {
-                    setLastDateToPlant(date)
-                    const plantCopy = { ...plant };
-                    plantCopy.lastDateToPlant = date.toISOString().split('T')[0]
-                    setPlant(plantCopy);
-                }} />
-            </fieldset> 
+                <fieldset>
+                    <label>Earliest Indoor Start Date: </label>
+                    <input type="date" name="earliest-indoor-start" value={plantObj.earliestIndoorStartDate || ""} onChange={(event) => {
+                        const plantCopy = { ...plantObj };
+                        plantCopy.earliestIndoorStartDate = event.target.value
+                        setPlantObj(plantCopy)
+                    }}/>
+                </fieldset>
+                <fieldset>
+                    <label>Latest Indoor Start Date: </label>
+                    <input type="date" name="latest-indoor-start" value={plantObj.latestIndoorStartDate || ""} onChange={(event) => {
+                        const plantCopy = { ...plantObj };
+                        plantCopy.latestIndoorStartDate = event.target.value
+                        setPlantObj(plantCopy)
+                    }}/>
+                </fieldset>
+               <fieldset>
+                    <label>Earliest Spring Start Date: </label>
+                    <input type="date" name="earliest-spring-start" value={plantObj.springEarliestOutdoorStartDate || ""} onChange={(event) => {
+                        const plantCopy = { ...plantObj };
+                        plantCopy.springEarliestOutdoorStartDate = event.target.value
+                        setPlantObj(plantCopy)
+                    }}/>
+                </fieldset>
+                 <fieldset>
+                    <label>Latest Spring Start Date: </label>
+                    <input type="date" name="latest-spring-start" value={plantObj.springLatestOutdoorStartDate || ""} onChange={(event) => {
+                        const plantCopy = { ...plantObj };
+                        plantCopy.springLatestOutdoorStartDate = event.target.value
+                        setPlantObj(plantCopy)
+                    }}/>
+                </fieldset>
+                <fieldset>
+                    <label>Earliest Fall Start Date: </label>
+                    <input type="date" name="earliest-fall-start" value={plantObj.fallEarliestOutdoorStartDate || ""} onChange={(event) => {
+                        const plantCopy = { ...plantObj };
+                        plantCopy.fallEarliestOutdoorStartDate = event.target.value
+                        setPlantObj(plantCopy)
+                    }}/>
+                </fieldset>
+                <fieldset>
+                    <label>Latest Fall Start Date: </label>
+                    <input type="date" name="latest-fall-start" value={plantObj.fallLatestOutdoorStartDate || ""} onChange={(event) => {
+                        const plantCopy = { ...plantObj };
+                        plantCopy.fallLatestOutdoorStartDate = event.target.value
+                        setPlantObj(plantCopy)
+                    }}/>
+                </fieldset>
+                <fieldset>
+                    <label>Latest Date to Plant: </label>
+                    <input type="date" name="latest-date-start" value={plantObj.lastDateToPlant || ""} onChange={(event) => {
+                        const plantCopy = { ...plantObj };
+                        plantCopy.lastDateToPlant = event.target.value
+                        setPlantObj(plantCopy)
+                    }}/>
+                </fieldset>
             <fieldset>
                 <label>Average Days to Mature After Planting: </label>
                 <input 
                     type="number"
                     placeholder="Type here"
                     onChange={(event) => {
-                        const plantCopy = { ...plant }
+                        const plantCopy = { ...plantObj }
                         plantCopy.averageDaysToMature = parseInt(event.target.value)
-                        setPlant(plantCopy)
+                        setPlantObj(plantCopy)
                     }}
                 />
             </fieldset>      
@@ -166,9 +153,9 @@ function CreatePlant( {currentUser} ) {
                     label="starterPlant"
                     type="checkbox"
                     onClick={() => {
-                        const plantCopy = { ...plant }
+                        const plantCopy = { ...plantObj }
                         plantCopy.useStart = !plantCopy.useStart
-                        setPlant(plantCopy)
+                        setPlantObj(plantCopy)
                     }}
                 />               
             </fieldset>   
@@ -178,9 +165,9 @@ function CreatePlant( {currentUser} ) {
                     type="text"
                     placeholder="Add image URL"
                     onChange={(event) => {
-                        const plantCopy = { ...plant }
+                        const plantCopy = { ...plantObj }
                         plantCopy.imageURL = event.target.value
-                        setPlant(plantCopy)
+                        setPlantObj(plantCopy)
                     }}
                 />
             </fieldset> 

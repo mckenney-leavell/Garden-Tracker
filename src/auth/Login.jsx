@@ -52,9 +52,9 @@ function Login() {
             </fieldset>
             </form>
         </section>
-        <section className="register-link">
+        {/* <section className="register-link">
             <Link to="/register">Or Register Here</Link>
-        </section>
+        </section> */}
         </main>
     )
 }
