@@ -4,13 +4,10 @@
     background-color: white;
     margin: 0;
     width: 100%;
-    max-width: none;
     padding: 0.5rem;
-    list-style-type: none;
 }
 
 .navbar-item {
-    display: block;
     flex-basis: 20%;
     list-style-type: none;
     text-align: center;
@@ -18,10 +15,6 @@
 }
 
 .navbar-item a {
-    display: block;
-    flex-basis: 20%;
-    list-style-type: none;
-    text-align: center;
     color: var(--offWhite);
 }
 

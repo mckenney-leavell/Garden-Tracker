@@ -1,11 +1,13 @@
 /* Plant card container */
 .plant {
+    flex: 1 1 calc(33.33% - 20px);
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    max-width: 300px;
+    max-width: 30%;
     margin: 16px;
+    float: left
 }
 
 /* Image container at the top */
