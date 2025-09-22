@@ -263,11 +263,6 @@
       "id": 4
     },
     {
-      "plantId": 1,
-      "userId": 1,
-      "id": 6
-    },
-    {
       "plantId": 5,
       "userId": 1,
       "id": 7
@@ -276,6 +271,16 @@
       "plantId": 9,
       "userId": 1,
       "id": 10
+    },
+    {
+      "plantId": 3,
+      "userId": 1,
+      "id": 12
+    },
+    {
+      "plantId": 8,
+      "userId": 1,
+      "id": 13
     }
   ],
   "plantingSeason": [

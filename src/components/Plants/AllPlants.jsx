@@ -9,10 +9,14 @@ import Plant from "./Plant";
 function AllPlants( {currentUser } ) {
   const [allPlants, setAllPlants] = useState([]);
 
-  useEffect(() => {
+  const getAndSetAllPlants = () => {
     allPlantService().then((plantArr) => {
       setAllPlants(plantArr);
-    });
+    })
+  }
+
+  useEffect(() => {
+    getAndSetAllPlants();
   }, []);
 
   return (
@@ -20,7 +24,7 @@ function AllPlants( {currentUser } ) {
       <h1>All Plants</h1>
       <article className="plants">
         {allPlants.map((plantObj) => {
-          return <Plant plant={plantObj} currentUser={currentUser} key={plantObj.id} />;
+          return <Plant getAndSetAllPlants={getAndSetAllPlants} plant={plantObj} currentUser={currentUser} key={plantObj.id} />;
         })}
       </article>
     </div>
