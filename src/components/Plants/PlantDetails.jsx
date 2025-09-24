@@ -29,12 +29,18 @@ function PlantDetails() {
         return <div>Loading...</div>
     } 
 
+    const renderDefaultImage = (e) => {
+        console.log("Image fialed to load, showing default")
+        e.target.onerror = null;
+        e.target.src = "https://static.vecteezy.com/system/resources/previews/011/839/326/non_2x/tree-planting-icon-sapling-icon-and-illustration-vector.jpg"
+    }
+
     return (
         <div>
             {/* <h1>Plant Details</h1> */}
             <section className="plant-details">
                 <div className="plant-details-header">
-                    <img className="plant-details-image" src={plant.imageURL} />
+                    <img className="plant-details-image" src={plant.imageURL} onError={renderDefaultImage}/>
                     <div className="plant-gen-info">
                         <div><h1>{plant.name}</h1></div>
 

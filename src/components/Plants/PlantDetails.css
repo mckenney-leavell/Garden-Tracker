@@ -20,6 +20,9 @@
 .plant-details-header {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
+    width: auto;
+    /* padding-right: -20px; */
 }
 
 .plant-details-image {
@@ -34,7 +37,7 @@
 .plant-gen-info {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: auto;
     padding-left: 2rem;
 }
 
@@ -53,6 +56,7 @@
     font-weight: 600;
     text-align: left;
     padding-bottom: 1rem;
+    padding-right: 0;
 }
 
 .plant-gen-info div {
