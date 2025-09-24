@@ -43,43 +43,46 @@ function Register() {
     }
     return (
     <main style={{ textAlign: "center" }}>
-    <form className="form-login" onSubmit={handleRegister}>
-        <h2>Please Register</h2>
-        <fieldset>
-        <div className="form-group">
-            <input
-            onChange={updateCustomer}
-            type="text"
-            id="fullName"
-            className="form-control"
-            placeholder="Enter your name"
-            required
-            autoFocus
-            />
-        </div>
-        </fieldset>
-        <fieldset>
-        <div className="form-group">
-            <input
-            onChange={updateCustomer}
-            type="email"
-            id="email"
-            className="form-control"
-            placeholder="Email address"
-            required
-            />
-        </div>
-        </fieldset>
-        <fieldset>
-        <div className="form-group">
-            <button className="login-btn btn-info" type="submit">
-            Register
-            </button>
-        </div>
-        </fieldset>
-    </form>
-        <section className="login-link">
-            <p>Already registered? <Link to="/login">Login here.</Link></p>
+        <section>
+            <form className="form-login" onSubmit={handleRegister}>
+                <h1 className="header">Welcome!</h1>
+                <h2>Please register</h2>
+                <fieldset>
+                <div className="form-group">
+                    <input
+                    onChange={updateCustomer}
+                    type="text"
+                    id="fullName"
+                    className="form-control"
+                    placeholder="Enter your name"
+                    required
+                    autoFocus
+                    />
+                </div>
+                </fieldset>
+                <fieldset>
+                <div className="form-group">
+                    <input
+                    onChange={updateCustomer}
+                    type="email"
+                    id="email"
+                    className="form-control"
+                    placeholder="Email address"
+                    required
+                    />
+                </div>
+                </fieldset>
+                <fieldset>
+                <div className="form-group">
+                    <button className="login-btn btn-info" type="submit">
+                    Register
+                    </button>
+                </div>
+                </fieldset>
+            </form>
+            <section className="login-link">
+                <p>Already registered? <Link to="/login">Login</Link></p>
+            </section>
         </section>
     </main>
     )
