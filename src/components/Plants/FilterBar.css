@@ -1,0 +1,9 @@
+.filter-bar {
+    display: flex;
+    flex: wrap;
+    justify-content: center;
+}
+
+.dropdown {
+    padding: 4px;
+}

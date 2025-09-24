@@ -5,8 +5,9 @@
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    max-width: 30%;
-    margin: 16px;
+    min-width: 150px;
+    max-width: 250px;
+    margin: 7px;
     float: left
 }
 
@@ -26,30 +27,82 @@
 /* Container for plant name and button (side by side) */
 .plant-info {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: center;
-    padding: 16px;
+    /* align-items: center; */
+    padding: 12px;
+    align-content: center;
+}
+
+.plant-info button {
+    max-width: 33px;
 }
 
 .plant-name {
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-    margin: 0;
+    width: 75%;
+    text-align: left;
+    align-content: center;
+    padding-right: 2px;
+}
+
+.created-plant-name {
+    width: 75%;
+    text-align: left;
+    align-content: center;
 }
 
 /* Save button styling */
 button {
+    flex: 1 30px;
     background-color: #373D20;
     color: white;
     border: none;
-    padding: 8px 16px;
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.2s;
+    max-height: 33px;
+    /* max-width: 33px; */
+    /* align-items: center; */
+    /* padding: 8px; */
+}
+
+.fa {
+    display: flex;
+    justify-content: center;
 }
 
 button:hover {
     background-color: #717744;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* width: 1rem; */
+    align-items: center;
+}
+
+.edit-btn {
+    margin-right: 4px;
+    /* padding: 8px; */
+    /* height: 30px;
+    width: 30px; */
+}
+
+/* .delete-btn {
+    margin-right: 4px; 
+    height: 30px;
+    width: 30px;
+    padding: 5px 
+} */
+
+.save-button {
+    background-color: rgb(200, 200, 200);
+}
+
+.save-button:hover {
+    background-color: rgb(200, 200, 200);
 }

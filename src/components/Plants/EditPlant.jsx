@@ -65,6 +65,7 @@ function Editplant() {
         <div>
             <form>
                 <h1>Edit Plant</h1>
+                <div className="input-form">
                 <fieldset>
                     <label>Plant Name: </label>
                     <input 
@@ -193,7 +194,8 @@ function Editplant() {
                 <fieldset>
                     <button onClick={handleUpdatePlant}>Save Changes</button>
                     <button onClick={handleCancel}>Cancel</button>
-                </fieldset>                                                       
+                </fieldset> 
+                </div>
             </form>
         </div>
     )

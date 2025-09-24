@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, Outlet } from "react-router-dom"
-import AllPlants from "../components/plants/AllPlants";
+import AllPlants from "../components/Plants/AllPlants";
 import NavBar from "../components/nav/NavBar";
 import { MyGarden } from "../components/plants/MyGarden";
 import CreatePlant from "../components/plants/CreatePlant";
@@ -8,6 +8,7 @@ import Profile from "../components/user/Profile";
 import EditPlant from "../components/plants/EditPlant";
 import EditProfile from "../components/user/EditProfile";
 import PlantDetails from "../components/plants/PlantDetails";
+
 
 function ApplicationViews() {
     const [currentUser, setCurrentUser] = useState({});

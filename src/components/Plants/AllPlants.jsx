@@ -45,9 +45,11 @@ function AllPlants( {currentUser } ) {
 
   return (
     <div className="plants-container">
-      <h1>All Plants</h1>
-      <SearchBar setSearchInput={setSearchInput} getSearchInput={getSearchInput}/>
-      <FilterPlants setSelectedTopic={setSelectedTopic} />
+      <h1 className="title">All Plants</h1>
+      <div className="page-filters"> 
+        <SearchBar setSearchInput={setSearchInput} getSearchInput={getSearchInput}/>
+        <FilterPlants setSelectedTopic={setSelectedTopic} />
+      </div>
       <article className="plants">
         {filteredPlants.map((plantObj) => {
           return <Plant getAndSetAllPlants={getAndSetAllPlants} plant={plantObj} currentUser={currentUser} key={plantObj.id} />;

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./FilterBar.css"
 import { getPlantGrowingSeasons, plantTypeService } from "../../services/plantService";
 
 function FilterPlants({ setSelectedTopic }) {
@@ -27,14 +28,14 @@ function FilterPlants({ setSelectedTopic }) {
                     )}
                 </select>
             </div>
-            {/* <div className="dropdown">
+            <div className="dropdown">
                 <select className="filter-plant-season" id="plant-season-dropdown">
                     <option className="season-option">Filter by growing season</option>
                     {plantSeasons.map((season) =>
                         <option value={season.id} key={season.id} className="season-option">{season.season}</option>
                     )}
                 </select>
-            </div> */}
+            </div>
         </div>
     )
 }
