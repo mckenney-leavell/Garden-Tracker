@@ -10,8 +10,16 @@
     margin: 30px auto;
 }
 
+.input-form > * {
+    padding: 10px;
+}
+
 fieldset {
     border: none;
+}
+
+fieldset > * {
+    margin: 5px;
 }
 
 /* form {

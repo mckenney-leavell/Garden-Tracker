@@ -5,7 +5,7 @@ import { createUser, getUserByEmail } from "../services/userService";
 function Register() {
     const [user, setUser] = useState({
         email: "",
-        fullName: "",
+        name: "",
     })
     let navigate = useNavigate()
 
@@ -52,7 +52,7 @@ function Register() {
                     <input
                     onChange={updateCustomer}
                     type="text"
-                    id="fullName"
+                    id="name"
                     className="form-control"
                     placeholder="Enter your name"
                     required
