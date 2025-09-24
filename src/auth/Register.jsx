@@ -11,9 +11,9 @@ function Register() {
 
     const registerNewUser = () => {
         createUser(user).then((createdUser) => {
-        if (createdUser.hasOwnProperty("id")) {
+        if (createdUser.id) {
             localStorage.setItem(
-            "honey_user",
+            "plant_user",
             JSON.stringify({
                 id: createdUser.id,
             })

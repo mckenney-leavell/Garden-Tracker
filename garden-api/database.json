@@ -24,6 +24,11 @@
       "id": 5,
       "name": "David Thompson",
       "email": "dthompson22@email.com"
+    },
+    {
+      "email": "maleavell@gmail.com",
+      "fullName": "McKenney",
+      "id": 6
     }
   ],
   "plants": [
