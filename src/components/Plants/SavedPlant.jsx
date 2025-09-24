@@ -27,8 +27,8 @@ function SavedPlant({ plant, getAndSetSavedPlants }) {
                 </div>
             </Link>
             <div className="plant-info">
-                <div>{plant.plant.name}</div>
-                <button onClick={handleSavedPlantDelete} className="remove-from-garden-btn">Remove</button>
+                <div className="plant-name">{plant.plant.name}</div>
+                <button onClick={handleSavedPlantDelete} className="fa fa-trash remove-from-garden-btn"/>
             </div>
         </section>
     )

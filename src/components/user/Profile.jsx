@@ -1,3 +1,4 @@
+import "../plants/AllPlants.css"
 import { useEffect, useState } from "react";
 import { getUserById } from "../../services/userService";
 import { allPlantService } from "../../services/plantService";
@@ -58,9 +59,11 @@ function Profile({ currentUser }) {
             <div className="created-plants">
                 <h2>Created Plants</h2>
                 <SearchBar getSearchInput={getSearchInput} setSearchInput={setSearchInput}/>
-                {filteredPlants.map((plant) => {
-                    return <UserCreatedPlants plant={plant} key={plant.id} getAndSetCreatedPlants={getAndSetCreatedPlants}/>
-                })}
+                <div className="plants">
+                    {filteredPlants.map((plant) => {
+                        return <UserCreatedPlants plant={plant} key={plant.id} getAndSetCreatedPlants={getAndSetCreatedPlants}/>
+                    })}
+                </div>
             </div>
         </div>
     )

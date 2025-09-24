@@ -32,33 +32,35 @@ function EditProfile({ currentUser }) {
   return (
     <form>
       <h1>Edit Profile</h1>
-      <fieldset>
-        <label>Name: </label>
-        <input
-          type="text"
-          value={user.name || ""}
-          onChange={(event) => {
-            const userCopy = { ...user };
-            userCopy.name = event.target.value;
-            setUser(userCopy);
-          }}
-        />
-      </fieldset>
-      <fieldset>
-        <label>Email: </label>
-        <input
-          type="email"
-          value={user.email || ""}
-          onChange={(event) => {
-            const userCopy = { ...user };
-            userCopy.email = event.target.value;
-            setUser(userCopy);
-          }}
-        />
-      </fieldset>
-      <fieldset>
-        <button onClick={handleSave}>Save Changes</button>
-      </fieldset>
+      <div className="input-form">
+        <fieldset>
+          <label>Name: </label>
+          <input
+            type="text"
+            value={user.name || ""}
+            onChange={(event) => {
+              const userCopy = { ...user };
+              userCopy.name = event.target.value;
+              setUser(userCopy);
+            }}
+          />
+        </fieldset>
+        <fieldset>
+          <label>Email: </label>
+          <input
+            type="email"
+            value={user.email || ""}
+            onChange={(event) => {
+              const userCopy = { ...user };
+              userCopy.email = event.target.value;
+              setUser(userCopy);
+            }}
+          />
+        </fieldset>
+        <fieldset>
+          <button onClick={handleSave}>Save Changes</button>
+        </fieldset>
+      </div>
     </form>
   );
 }

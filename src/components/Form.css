@@ -1,0 +1,21 @@
+.input-form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 10px;
+    margin: 30px auto;
+}
+
+fieldset {
+    border: none;
+}
+
+/* form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */

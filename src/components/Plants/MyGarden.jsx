@@ -44,10 +44,14 @@ export const MyGarden = ( {currentUser} ) => {
 
     return (
         <div className="saved-plants-container">
-            <h1>My Garden</h1>
-            <SearchBar getSearchInput={getSearchInput} setSearchInput={setSearchInput}/>
-            <FilterPlants setSelectedTopic={setSelectedTopic}/>
-            <article className="saved-plants">
+            <div>
+                <h1 className="page-title">My Garden</h1>
+                <div className="page-filters">
+                    <SearchBar getSearchInput={getSearchInput} setSearchInput={setSearchInput}/>
+                    <FilterPlants setSelectedTopic={setSelectedTopic}/>
+                </div>
+            </div>
+            <article className="plants">
                 {filteredPlants.map((savedPlantObj) => {
                     return <SavedPlant getAndSetSavedPlants={getAndSetSavedPlants} plant={savedPlantObj} key={savedPlantObj.id} />
                 })}

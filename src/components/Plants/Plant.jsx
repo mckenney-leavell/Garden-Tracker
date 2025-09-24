@@ -7,7 +7,7 @@ function Plant( {plant, currentUser, getAndSetAllPlants} ) {
     // if there is a saved plant object with the current user id and plant id, save button is not visible
     // create useState for current savedPlantObj
     const [currentSavedPlant, setCurrentSavedPlant] = useState([])
-    const [showButton, setShowButton] = useState(true)
+    // const [showButton, setShowButton] = useState(true)
 
     useEffect(() => {
         if (!currentUser || !currentUser.id) {
@@ -26,15 +26,13 @@ function Plant( {plant, currentUser, getAndSetAllPlants} ) {
 
     const showSaveButton = () => {
         if (currentSavedPlant.length > 0) {
-            return <p><em>Saved</em></p>
+            return <button className="fa fa-plus save-button"/>
         } else {
             return <button 
-                className="save-to-garden-btn"
+                className="fa fa-plus save-to-garden-btn"
                 value={plant.id}
                 onClick={handleSaveToGarden}
-            >
-                Save
-            </button>
+            />
         }
     }
 
@@ -58,18 +56,10 @@ function Plant( {plant, currentUser, getAndSetAllPlants} ) {
                 </div>
             </Link>
             <div className="plant-info">
-                <div>{plant.name}</div>  
-                <div>
-                { showSaveButton()   
-                    // <button 
-                    //     className="save-to-garden-btn"
-                    //     value={plant.id}
-                    //     onClick={handleSaveToGarden}
-                    // >
-                    //     Save
-                    // </button>
-                }
-                </div>
+                <div className="plant-name">{plant.name}</div>  
+                {/* <div> */}
+                {showSaveButton()}
+                {/* </div> */}
             </div>
         </section>
     )

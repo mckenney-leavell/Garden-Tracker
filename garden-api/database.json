@@ -215,23 +215,6 @@
       "creatorId": null
     },
     {
-      "name": "test plant",
-      "plantTypeId": 2,
-      "earliestIndoorStartDate": "",
-      "latestIndoorStartDate": "",
-      "springEarliestOutdoorStartDate": "",
-      "springLatestOutdoorStartDate": "",
-      "fallEarliestOutdoorStartDate": "",
-      "fallLatestOutdoorStartDate": "",
-      "lastDateToPlant": "",
-      "averageDaysToMature": null,
-      "useStart": false,
-      "companionPlants": null,
-      "imageURL": "fakeurl.com",
-      "creatorId": 1,
-      "id": 12
-    },
-    {
       "name": "test",
       "plantTypeId": 1,
       "earliestIndoorStartDate": "2025-09-03",
@@ -246,40 +229,6 @@
       "companionPlants": null,
       "imageURL": "test.com",
       "id": 13
-    },
-    {
-      "name": "Fake plant",
-      "plantTypeId": 2,
-      "earliestIndoorStartDate": "2025-09-17",
-      "latestIndoorStartDate": "",
-      "springEarliestOutdoorStartDate": "",
-      "springLatestOutdoorStartDate": "",
-      "fallEarliestOutdoorStartDate": "",
-      "fallLatestOutdoorStartDate": "",
-      "lastDateToPlant": "",
-      "averageDaysToMature": null,
-      "useStart": false,
-      "companionPlants": null,
-      "imageURL": "imageurl",
-      "creatorId": 1,
-      "id": 14
-    },
-    {
-      "name": "Another fake plant",
-      "plantTypeId": 3,
-      "earliestIndoorStartDate": "",
-      "latestIndoorStartDate": "",
-      "springEarliestOutdoorStartDate": "",
-      "springLatestOutdoorStartDate": "2025-09-10",
-      "fallEarliestOutdoorStartDate": "2025-09-26",
-      "fallLatestOutdoorStartDate": "",
-      "lastDateToPlant": "",
-      "averageDaysToMature": null,
-      "useStart": true,
-      "companionPlants": null,
-      "imageURL": "fakeimageurl",
-      "creatorId": 1,
-      "id": 15
     }
   ],
   "plantTypes": [
@@ -303,34 +252,14 @@
       "userId": 2
     },
     {
-      "id": 3,
-      "plantId": 7,
-      "userId": 1
-    },
-    {
       "plantId": 6,
       "userId": 1,
       "id": 4
     },
     {
-      "plantId": 5,
+      "plantId": 4,
       "userId": 1,
-      "id": 7
-    },
-    {
-      "plantId": 9,
-      "userId": 1,
-      "id": 10
-    },
-    {
-      "plantId": 3,
-      "userId": 1,
-      "id": 12
-    },
-    {
-      "plantId": 8,
-      "userId": 1,
-      "id": 13
+      "id": 8
     }
   ],
   "plantingSeason": [

@@ -3,57 +3,64 @@ import "./Navbar.css"
 
 function NavBar() {
 	const navigate = useNavigate()
+
+	const profileNav = () => navigate("/profile")
+	const homeNav = () => navigate("/")
+
 	return (
-		<ul className="nav-bar">
-			<li className="navbar-item">
+		<nav id="nav-bar">
+			<div className="navbar-item">
+				<div 
+					onClick={homeNav}
+					className="home-button fa fa-leaf"
+				/>
+			</div>
+			<div className="navbar-item">
 				<Link
 					to="/"
 					
 				>
 					All Plants
 				</Link>
-			</li>
-			<li className="navbar-item">
+			</div>
+			<div className="navbar-item">
 				<Link
 					to="/my-garden"
 					
 				>
 					My Garden
 				</Link>
-			</li>
-			<li className="navbar-item">
+			</div>
+			<div className="navbar-item">
 				<Link
 					to="/create"
 					
 				>
 					Create Plant
 				</Link>
-			</li>
-			<li className="navbar-item">
-				<Link
-					to="/profile"
-					
-				>
-					Profile
-				</Link>
-			</li>
-			{localStorage.getItem("plant_user") ? (
-				<li className="navbar-item">
-					<Link
-						to=""
-						onClick={() => {
-							localStorage.removeItem("plant_user")
-							navigate("/", { replace: true })
-						}}
-						// className="navbar-link"
-					>
-						Logout
-					</Link>
-				</li>
-			) : (
-				""
-			)}
-		</ul>
+			</div>
+				<div className="navbar-item navbar-right">
+					<button
+						to="/profile"
+						onClick={profileNav}
+						className="fa fa-user-circle"
+					/>
+				</div>
+				{localStorage.getItem("plant_user") ? (
+					<div className="navbar-item">
+						<button
+							to=""
+							onClick={() => {
+								localStorage.removeItem("plant_user")
+								navigate("/", { replace: true })
+							}}
+							className="fa fa-sign-out"
+						/>
+					</div>	
+				) : (
+					""
+				)}
+		</nav>
 	)
 }
 

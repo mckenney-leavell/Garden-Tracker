@@ -23,9 +23,11 @@ function UserCreatedPlants({ plant, getAndSetCreatedPlants }) {
                 </div>
             </Link>
             <div className="plant-info">
-                <div>{plant.name}</div>
-                <button key={plant.id} onClick={navToEditPlant} className="edit-btn">Edit</button>
-                <button className="delete-btn" onClick={handlePlantDelete}>Delete</button>              
+                <div className="created-plant-name">{plant.name}</div>
+                <div className="btn-container">
+                    <button key={plant.id} onClick={navToEditPlant} className="fa fa-edit edit-btn"/>
+                    <button className="fa fa-trash delete-btn" onClick={handlePlantDelete}/>
+                </div>             
             </div>
         </section>
     )
