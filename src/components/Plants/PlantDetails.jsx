@@ -1,3 +1,4 @@
+import "./PlantDetails.css"
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getPlantTypeById } from "../../services/plantService";
@@ -30,49 +31,67 @@ function PlantDetails() {
 
     return (
         <div>
-            <h1>Plant Details</h1>
+            {/* <h1>Plant Details</h1> */}
             <section className="plant-details">
-                <img className="plant-image" src={plant.imageURL} />
+                <div className="plant-details-header">
+                    <img className="plant-details-image" src={plant.imageURL} />
+                    <div className="plant-gen-info">
+                        <div><h1>{plant.name}</h1></div>
 
-                <h2>{plant.name}</h2>
+                        <div>
+                        <p>Plant type: {plant.plantType.type}</p>
+                        </div>
 
-                <p>{plant.plantType.type}</p>
+                        {plant.lastDateToPlant ? 
+                            <div><p>Average days to mature: {plant.averageDaysToMature}</p></div>
+                            : ""}
+                        
+                        {plant.useStart ? 
+                            <div><p>Starter plant recommended: {plant.useStart ? <span> Yes</span> : <span> No</span>}</p></div>
+                        : ""}
 
-                <div>{getMonthAndDate(plant.earliestIndoorStartDate) ? 
-                <div>
-                    <p><strong>Start Seeds Indoors:</strong></p>
-                    <p>{getMonthAndDate(plant.earliestIndoorStartDate)} - {getMonthAndDate(plant.latestIndoorStartDate)}</p></div> 
-                    : ""}
+                        
+                            <div>{plant.lastDateToPlant ? 
+                            <p>Last date to plant: {getMonthAndDate(plant.lastDateToPlant)}</p>
+                            : ""}
+                        </div>
+
+                    </div>
                 </div>
+                <div className="growing-dates-season">
+
+                    <h3>Growing Dates by Season:</h3>
+
+                    <div className="growing-dates">
                 
-                <div>{plant.springEarliestOutdoorStartDate || plant.fallEarliestOutdoorStartDate ? 
-                    <p><strong>Start Seeds Outdoors:</strong></p>
-                    : ""
-                }
-                </div>
+                    {getMonthAndDate(plant.earliestIndoorStartDate) ?
+                        <div className="indoor-dates">           
+                            <div>
+                                <p><strong>Start Seeds Indoors:</strong></p>
+                                <p>{getMonthAndDate(plant.earliestIndoorStartDate)} - {getMonthAndDate(plant.latestIndoorStartDate)}</p>
+                            </div> 
+                        </div>
+                    : ""}
 
-                <div>{getMonthAndDate(plant.springEarliestOutdoorStartDate) ? 
-                    <div>           
-                        <p>Spring: {getMonthAndDate(plant.springEarliestOutdoorStartDate)} - {getMonthAndDate(plant.springLatestOutdoorStartDate)} </p>
+                    {plant.springEarliestOutdoorStartDate || plant.fallEarliestOutdoorStartDate ?  
+                    <div className="outdoor-dates">        
+                        <p><strong>Start Seeds Outdoors:</strong></p>
+                            
+                        <div>{getMonthAndDate(plant.springEarliestOutdoorStartDate) ? 
+                            <div>           
+                                <p>Spring: {getMonthAndDate(plant.springEarliestOutdoorStartDate)} - {getMonthAndDate(plant.springLatestOutdoorStartDate)} </p>
+                            </div>
+                            : ""}
+                        </div>
+
+                        <div>{getMonthAndDate(plant.fallEarliestOutdoorStartDate) ? 
+                            <p>Fall: {getMonthAndDate(plant.fallEarliestOutdoorStartDate)} - {getMonthAndDate(plant.fallLatestOutdoorStartDate)}</p> 
+                            : ""}
+                        </div>
+                        
                     </div>
                     : ""}
-                </div>
-
-                <div>{getMonthAndDate(plant.fallEarliestOutdoorStartDate) ? 
-                    <p>Fall: {getMonthAndDate(plant.fallEarliestOutdoorStartDate)} - {getMonthAndDate(plant.fallLatestOutdoorStartDate)}</p> 
-                    : ""}
-                </div>
-                <div>{plant.lastDateToPlant ? 
-                    <p>Last date to plant: {getMonthAndDate(plant.lastDateToPlant)}</p>
-                    : ""}
-                </div>
-                <div>{plant.lastDateToPlant ? 
-                    <p>Average days to mature: {plant.averageDaysToMature}</p>
-                    : ""}
-                </div>
-                <div>{plant.useStart ? 
-                    <p>Starter plant recommended: {plant.useStart ? <span> Yes</span> : <span> No</span>}</p>
-                    : ""}
+                    </div>
                 </div>
             </section>
         </div>
