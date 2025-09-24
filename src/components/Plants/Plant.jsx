@@ -48,11 +48,25 @@ function Plant( {plant, currentUser, getAndSetAllPlants} ) {
         })
     }
 
+    const renderDefaultImage = (e) => {
+        console.log("Image fialed to load, showing default")
+        e.target.onerror = null;
+        e.target.src = "https://static.vecteezy.com/system/resources/previews/011/839/326/non_2x/tree-planting-icon-sapling-icon-and-illustration-vector.jpg"
+    }
+
+    const getImageSrc = () => {
+        if (!plant.imageURL || plant.imageURL === "") {
+            console.log("using default image from getImageSrc")
+            return ""
+        } 
+        return plant.imageURL
+    }
+
     return (
         <section className="plant">
             <Link to={`/plants/plant-details/${plant.id}`} >
                 <div className="plant-image">
-                    <img src={plant.imageURL} alt={plant.name}/>
+                    <img src={getImageSrc()} alt={plant.name} onError={renderDefaultImage}/>
                 </div>
             </Link>
             <div className="plant-info">
