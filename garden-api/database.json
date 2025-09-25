@@ -52,7 +52,7 @@
       "useStart": false,
       "companionPlants": "",
       "imageURL": "https://www.almanac.com/sites/default/files/users/The%20Editors/carrots-table_popidar-ss_quarter_width.jpg",
-      "creatorId": null
+      "creatorId": 1
     },
     {
       "id": 2,
@@ -69,7 +69,7 @@
       "useStart": false,
       "companionPlants": "",
       "imageURL": "https://www.almanac.com/sites/default/files/styles/or/public/image_nodes/corn-1605664_1920.jpg?itok=uXpIrXPG",
-      "creatorId": null
+      "creatorId": 1
     },
     {
       "id": 3,
@@ -265,11 +265,6 @@
       "plantId": 6,
       "userId": 1,
       "id": 4
-    },
-    {
-      "plantId": 4,
-      "userId": 1,
-      "id": 8
     },
     {
       "plantId": 5,
