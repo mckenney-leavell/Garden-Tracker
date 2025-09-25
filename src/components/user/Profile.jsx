@@ -57,13 +57,19 @@ function Profile({ currentUser }) {
             <div>Email: {user.email}</div>
             <button onClick={navEditProfile}>Edit Profile</button>
             <div className="created-plants">
-                <h2>Created Plants</h2>
-                <SearchBar getSearchInput={getSearchInput} setSearchInput={setSearchInput}/>
-                <div className="plants">
-                    {filteredPlants.map((plant) => {
-                        return <UserCreatedPlants plant={plant} key={plant.id} getAndSetCreatedPlants={getAndSetCreatedPlants}/>
-                    })}
-                </div>
+                {createdPlants.length > 0 ?  
+                    <>
+                        <h2>Created Plants</h2> 
+                                    
+                        <SearchBar getSearchInput={getSearchInput} setSearchInput={setSearchInput}/>
+                        
+                        <div className="plants">
+                            {filteredPlants.map((plant) => {
+                                return <UserCreatedPlants plant={plant} key={plant.id} getAndSetCreatedPlants={getAndSetCreatedPlants}/>
+                            })}               
+                        </div>
+                    </>
+                : ""}
             </div>
         </div>
     )

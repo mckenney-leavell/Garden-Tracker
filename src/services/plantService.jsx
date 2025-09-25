@@ -26,6 +26,10 @@ export const getPlantGrowingSeasons = () => {
     return fetch ("http://localhost:8088/plantingSeason").then(res => res.json())
 }
 
+export const getAssignedPlantSeasons = () => {
+    return fetch("http://localhost:8088/assignedPlantingSeason").then(res => res.json())
+}
+
 export const savePlantToGarden = (savedPlant) => {
     return fetch ("http://localhost:8088/savedPlant", {
         method: "POST",

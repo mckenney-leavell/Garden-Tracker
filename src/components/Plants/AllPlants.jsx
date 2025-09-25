@@ -1,6 +1,6 @@
 import "./AllPlants.css"
 import { useEffect, useState } from "react";
-import { allPlantService } from "../../services/plantService";
+import { allPlantService, getAssignedPlantSeasons } from "../../services/plantService";
 import Plant from "./Plant";
 import FilterPlants from "./FilterPlants";
 import SearchBar from "../SearchBar";
@@ -8,7 +8,7 @@ import SearchBar from "../SearchBar";
 function AllPlants( {currentUser } ) {
   const [allPlants, setAllPlants] = useState([]);
   const [selectedTopic, setSelectedTopic] = useState([])
-  // const [selectedSeason, setSelectedSeason] = useState([])
+  const [sortedPlantsByDate, setSortedPlants] = useState([])
   const [filteredPlants, setFilteredPlants] = useState([])
   const [getSearchInput, setSearchInput] = useState("")
 
@@ -17,6 +17,8 @@ function AllPlants( {currentUser } ) {
       setAllPlants(plantArr);
     })
   }
+
+  // selectedSeason === seasonId 
 
   useEffect(() => {
     getAndSetAllPlants();
@@ -27,18 +29,19 @@ function AllPlants( {currentUser } ) {
       const filteredByPlantType = allPlants.filter((plant) => 
           plant.plantTypeId === parseInt(selectedTopic))
       setFilteredPlants(filteredByPlantType)
-    } else if (getSearchInput.length > 0) {
+    } 
+    // else if (Number.isInteger(parseInt(selectedSeason))) {
+    //   const filteredByPlantSeason = allPlants.filter((plant) => 
+    //      plant.
+    //    )
+    // }
+
+    else if (getSearchInput.length > 0) {
       const foundPlants = allPlants.filter((plant) =>
         plant.name.toLowerCase().includes(getSearchInput.toLowerCase())
       )
       setFilteredPlants(foundPlants)
-    } 
-    // else if (Number.isInteger(parseInt(selectedSeason))) {
-    //   const filteredByPlantSeason = allPlants.filter((plant) => 
-    //     plant.
-    //   )
-    // }
-    else {
+    } else {
       setFilteredPlants(allPlants)
     }
   }, [allPlants, selectedTopic, getSearchInput])
@@ -48,7 +51,7 @@ function AllPlants( {currentUser } ) {
       <h1 className="title">All Plants</h1>
       <div className="page-filters"> 
         <SearchBar setSearchInput={setSearchInput} getSearchInput={getSearchInput}/>
-        <FilterPlants setSelectedTopic={setSelectedTopic} />
+        <FilterPlants filteredPlants={setFilteredPlants} setSelectedTopic={setSelectedTopic} setSortedPlants={setSortedPlants} />
       </div>
       <article className="plants">
         {filteredPlants.map((plantObj) => {
