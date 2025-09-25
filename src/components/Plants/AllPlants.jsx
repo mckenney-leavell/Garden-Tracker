@@ -1,6 +1,6 @@
 import "./AllPlants.css"
 import { useEffect, useState } from "react";
-import { allPlantService, getAssignedPlantSeasons } from "../../services/plantService";
+import { allPlantService } from "../../services/plantService";
 import Plant from "./Plant";
 import FilterPlants from "./FilterPlants";
 import SearchBar from "../SearchBar";
@@ -8,7 +8,6 @@ import SearchBar from "../SearchBar";
 function AllPlants( {currentUser } ) {
   const [allPlants, setAllPlants] = useState([]);
   const [selectedTopic, setSelectedTopic] = useState([])
-  const [sortedPlantsByDate, setSortedPlants] = useState([])
   const [filteredPlants, setFilteredPlants] = useState([])
   const [getSearchInput, setSearchInput] = useState("")
 
@@ -18,40 +17,65 @@ function AllPlants( {currentUser } ) {
     })
   }
 
-  // selectedSeason === seasonId 
-
   useEffect(() => {
     getAndSetAllPlants();
   }, []);
 
   useEffect(() => {
-    if (Number.isInteger(parseInt(selectedTopic))) {
-      const filteredByPlantType = allPlants.filter((plant) => 
-          plant.plantTypeId === parseInt(selectedTopic))
-      setFilteredPlants(filteredByPlantType)
-    } 
-    // else if (Number.isInteger(parseInt(selectedSeason))) {
-    //   const filteredByPlantSeason = allPlants.filter((plant) => 
-    //      plant.
-    //    )
-    // }
-
-    else if (getSearchInput.length > 0) {
+    if (selectedTopic.length === 0 && getSearchInput.length > 0) {
       const foundPlants = allPlants.filter((plant) =>
-        plant.name.toLowerCase().includes(getSearchInput.toLowerCase())
+        plant.name?.toLowerCase().includes(getSearchInput.toLowerCase())
       )
       setFilteredPlants(foundPlants)
+      console.log("No plant type selected")
+    } else if (getSearchInput.length === 0 && selectedTopic.length > 0) {
+        console.log("Plant type selected")
+        const filteredByPlantType = allPlants.filter((plant) => 
+          plant.plantTypeId === parseInt(selectedTopic)
+        )
+        const foundPlants = filteredByPlantType.filter((plant) =>
+          plant.name?.toLowerCase().includes(getSearchInput.toLowerCase())
+        )
+        setFilteredPlants(foundPlants)
+    } else if (getSearchInput.length > 0 && selectedTopic.length > 0) {
+        console.log("Plant type selected")
+        const filteredByPlantType = allPlants.filter((plant) => 
+          plant.plantTypeId === parseInt(selectedTopic)
+        )
+        const foundPlants = filteredByPlantType.filter((plant) =>
+          plant.name?.toLowerCase().includes(getSearchInput.toLowerCase())
+        )
+        setFilteredPlants(foundPlants)
     } else {
       setFilteredPlants(allPlants)
     }
-  }, [allPlants, selectedTopic, getSearchInput])
+  }, [allPlants, getSearchInput, selectedTopic])
+
+  // useEffect(() => {
+  //   if (getSearchInput.length > 0) {
+  //       console.log("Plant type selected")
+  //       const filteredByPlantType = allPlants.filter((plant) => 
+  //         plant.plantTypeId === parseInt(selectedTopic)
+  //       )
+  //       const foundPlants = filteredByPlantType.filter((plant) =>
+  //         plant.name?.toLowerCase().includes(getSearchInput.toLowerCase())
+  //       )
+  //       setFilteredPlants(foundPlants)
+  //   } else if (Number.isInteger(parseInt(selectedTopic))) {
+  //     const filteredByPlantType = allPlants.filter((plant) => 
+  //         plant.plantTypeId === parseInt(selectedTopic))
+  //     setFilteredPlants(filteredByPlantType)
+  //   } else {
+  //     setFilteredPlants(allPlants)
+  //   }
+  // }, [allPlants, selectedTopic])
 
   return (
     <div className="plants-container">
       <h1 className="title">All Plants</h1>
       <div className="page-filters"> 
         <SearchBar setSearchInput={setSearchInput} getSearchInput={getSearchInput}/>
-        <FilterPlants filteredPlants={setFilteredPlants} setSelectedTopic={setSelectedTopic} setSortedPlants={setSortedPlants} />
+        <FilterPlants filteredPlants={setFilteredPlants} setSelectedTopic={setSelectedTopic} setSortedPlants />
       </div>
       <article className="plants">
         {filteredPlants.map((plantObj) => {

@@ -40,14 +40,14 @@ export const MyGarden = ( {currentUser} ) => {
         else {
             setFilteredPlants(userSavedPlants)
         }
-  }, [userSavedPlants, getSearchInput, selectedTopic])
+    }, [userSavedPlants, getSearchInput, selectedTopic])
 
     return (
         <div className="saved-plants-container">
             <div>
                 <h1 className="page-title">My Garden</h1>
                 <div className="page-filters">
-                    <SearchBar getSearchInput={getSearchInput} setSearchInput={setSearchInput}/>
+                    <SearchBar getSearchInput={getSearchInput} setSearchInput={setSearchInput} />
                     <FilterPlants setSelectedTopic={setSelectedTopic}/>
                 </div>
             </div>
