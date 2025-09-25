@@ -29,6 +29,11 @@
       "email": "maleavell@gmail.com",
       "name": "McKenney",
       "id": 6
+    },
+    {
+      "email": "d@d.com",
+      "name": "dave",
+      "id": 7
     }
   ],
   "plants": [
@@ -265,6 +270,31 @@
       "plantId": 4,
       "userId": 1,
       "id": 8
+    },
+    {
+      "plantId": 5,
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "plantId": 2,
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "plantId": 3,
+      "userId": 7,
+      "id": 11
+    },
+    {
+      "plantId": 9,
+      "userId": 7,
+      "id": 12
+    },
+    {
+      "plantId": 4,
+      "userId": 7,
+      "id": 13
     }
   ],
   "plantingSeason": [
