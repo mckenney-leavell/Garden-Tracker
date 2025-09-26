@@ -1,4 +1,4 @@
-import "./AllPlants.css"
+// import "./userSavedPlants.css"
 import { useEffect, useState } from "react";
 import { savedPlantsService } from "../../services/plantService";
 import SavedPlant from "./SavedPlant";
@@ -26,21 +26,34 @@ export const MyGarden = ( {currentUser} ) => {
     }, [currentUser])
 
     useEffect(() => {
-        if (Number.isInteger(parseInt(selectedTopic))) {
+        if (selectedTopic.length === 0 && getSearchInput.length > 0) {
+        const foundPlants = userSavedPlants.filter((plantObj) =>
+            plantObj.plant.name?.toLowerCase().includes(getSearchInput.toLowerCase())
+        )
+        setFilteredPlants(foundPlants)
+        console.log("No plant type selected")
+        } else if (getSearchInput.length === 0 && selectedTopic.length > 0) {
+            console.log("Plant type selected")
             const filteredByPlantType = userSavedPlants.filter((plantObj) => 
-                plantObj.plant.plantTypeId === parseInt(selectedTopic))
-        
-            setFilteredPlants(filteredByPlantType)
-        } else if (getSearchInput.length > 0) {
-            const foundPlants = userSavedPlants.filter((plantObj) =>
-                plantObj.plant.name.toLowerCase().includes(getSearchInput.toLowerCase())
+            plantObj.plant.plantTypeId === parseInt(selectedTopic)
+            )
+            const foundPlants = filteredByPlantType.filter((plantObj) =>
+            plantObj.plant.name?.toLowerCase().includes(getSearchInput.toLowerCase())
             )
             setFilteredPlants(foundPlants)
-        } 
-        else {
+        } else if (getSearchInput.length > 0 && selectedTopic.length > 0) {
+            console.log("Plant type selected")
+            const filteredByPlantType = userSavedPlants.filter((plantObj) => 
+            plantObj.plant.plantTypeId === parseInt(selectedTopic)
+            )
+            const foundPlants = filteredByPlantType.filter((plantObj) =>
+            plantObj.plant.name?.toLowerCase().includes(getSearchInput.toLowerCase())
+            )
+            setFilteredPlants(foundPlants)
+        } else {
             setFilteredPlants(userSavedPlants)
         }
-    }, [userSavedPlants, getSearchInput, selectedTopic])
+    }, [userSavedPlants, getSearchInput, selectedTopic])    
 
     return (
         <div className="saved-plants-container">
@@ -48,7 +61,7 @@ export const MyGarden = ( {currentUser} ) => {
                 <h1 className="page-title">My Garden</h1>
                 <div className="page-filters">
                     <SearchBar getSearchInput={getSearchInput} setSearchInput={setSearchInput} />
-                    <FilterPlants setSelectedTopic={setSelectedTopic}/>
+                    <FilterPlants filteredPlants={setFilteredPlants} setSelectedTopic={setSelectedTopic}/>
                 </div>
             </div>
             <article className="plants">

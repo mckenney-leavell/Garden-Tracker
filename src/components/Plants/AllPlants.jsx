@@ -75,7 +75,7 @@ function AllPlants( {currentUser } ) {
       <h1 className="title">All Plants</h1>
       <div className="page-filters"> 
         <SearchBar setSearchInput={setSearchInput} getSearchInput={getSearchInput}/>
-        <FilterPlants filteredPlants={setFilteredPlants} setSelectedTopic={setSelectedTopic} setSortedPlants />
+        <FilterPlants filteredPlants={setFilteredPlants} setSelectedTopic={setSelectedTopic} />
       </div>
       <article className="plants">
         {filteredPlants.map((plantObj) => {

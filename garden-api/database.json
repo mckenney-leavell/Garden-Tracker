@@ -239,23 +239,6 @@
       "companionPlants": null,
       "imageURL": "test.com",
       "id": 13
-    },
-    {
-      "name": "Another plant",
-      "plantTypeId": 3,
-      "earliestIndoorStartDate": "",
-      "latestIndoorStartDate": "",
-      "springEarliestOutdoorStartDate": "",
-      "springLatestOutdoorStartDate": "",
-      "fallEarliestOutdoorStartDate": "",
-      "fallLatestOutdoorStartDate": "",
-      "lastDateToPlant": "",
-      "averageDaysToMature": null,
-      "useStart": false,
-      "companionPlants": null,
-      "imageURL": "fakeurl.com",
-      "creatorId": 1,
-      "id": 14
     }
   ],
   "plantTypes": [
@@ -309,9 +292,19 @@
       "id": 13
     },
     {
-      "plantId": 14,
+      "plantId": 10,
       "userId": 1,
-      "id": 14
+      "id": 15
+    },
+    {
+      "plantId": 4,
+      "userId": 1,
+      "id": 16
+    },
+    {
+      "plantId": 3,
+      "userId": 1,
+      "id": 17
     }
   ],
   "plantingSeason": [
