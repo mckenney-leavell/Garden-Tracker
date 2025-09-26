@@ -1,7 +1,5 @@
 #root {
   width: 100%;
-  /* margin: 0 auto; */
-  /* padding: 2rem; */
   text-align: center;
 }
 
@@ -70,6 +68,17 @@ body, html {
 
 .page-filters > * {
   padding: 10px;
+}
+
+button {
+    background-color: #373D20;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
 }
 
 /* .title {

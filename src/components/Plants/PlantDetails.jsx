@@ -81,7 +81,7 @@ function PlantDetails({ currentUser }) {
                     {getMonthAndDate(plant.earliestIndoorStartDate) ?
                         <div className="indoor-dates">           
                             <div>
-                                <p><strong>Start Seeds Indoors:</strong></p>
+                                <p>Start Seeds Indoors:</p>
                                 <p>{getMonthAndDate(plant.earliestIndoorStartDate)} - {getMonthAndDate(plant.latestIndoorStartDate)}</p>
                             </div> 
                         </div>
@@ -89,7 +89,7 @@ function PlantDetails({ currentUser }) {
 
                     {plant.springEarliestOutdoorStartDate || plant.fallEarliestOutdoorStartDate ?  
                     <div className="outdoor-dates">        
-                        <p><strong>Start Seeds Outdoors:</strong></p>
+                        <p>Start Seeds Outdoors:</p>
                             
                         <div>{getMonthAndDate(plant.springEarliestOutdoorStartDate) ? 
                             <div>           
