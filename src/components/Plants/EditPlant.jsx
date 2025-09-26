@@ -50,7 +50,7 @@ function Editplant() {
             if (editedPlant.name && editedPlant.plantTypeId && editedPlant.imageURL) {
                 updatePlantService(editedPlant).then(() => {
                     console.log("Updated plant:", editedPlant)
-                    navigate("/profile")
+                    navigate(`/plants/plant-details/${id}`)
                 })
     
             } else {
@@ -58,7 +58,7 @@ function Editplant() {
             }
     }
 
-    const handleCancel = () => navigate("/profile")
+    const handleCancel = () => navigate(`/plants/plant-details/${id}`)
 
 
     return(

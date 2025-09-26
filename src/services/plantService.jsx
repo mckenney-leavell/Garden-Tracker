@@ -47,7 +47,7 @@ export const createPlantService = (plant) => {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(plant)
-    })
+    }).then(res => res.json())
 }
 
 export const updatePlantService = (plant) => {

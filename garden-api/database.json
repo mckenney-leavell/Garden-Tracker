@@ -55,7 +55,6 @@
       "creatorId": 1
     },
     {
-      "id": 2,
       "name": "Corn",
       "plantTypeId": 1,
       "earliestIndoorStartDate": "",
@@ -69,7 +68,8 @@
       "useStart": false,
       "companionPlants": "",
       "imageURL": "https://www.almanac.com/sites/default/files/styles/or/public/image_nodes/corn-1605664_1920.jpg?itok=uXpIrXPG",
-      "creatorId": 1
+      "creatorId": 1,
+      "id": 2
     },
     {
       "id": 3,
@@ -225,20 +225,21 @@
       "creatorId": null
     },
     {
-      "name": "test",
+      "name": "Fake plant",
       "plantTypeId": 1,
-      "earliestIndoorStartDate": "2025-09-03",
-      "latestIndoorStartDate": "2025-09-05",
-      "springEarliestOutdoorStartDate": "2025-09-17",
-      "springLatestOutdoorStartDate": "2025-09-26",
-      "fallEarliestOutdoorStartDate": "2025-09-01",
-      "fallLatestOutdoorStartDate": "2025-09-03",
-      "lastDateToPlant": "2025-09-17",
-      "averageDaysToMature": 6,
+      "earliestIndoorStartDate": "",
+      "latestIndoorStartDate": "",
+      "springEarliestOutdoorStartDate": "",
+      "springLatestOutdoorStartDate": "",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "",
+      "averageDaysToMature": null,
       "useStart": false,
       "companionPlants": null,
-      "imageURL": "test.com",
-      "id": 13
+      "imageURL": "fakeplant.url",
+      "creatorId": 1,
+      "id": 12
     }
   ],
   "plantTypes": [

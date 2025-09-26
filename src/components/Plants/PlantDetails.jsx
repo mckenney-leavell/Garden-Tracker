@@ -1,14 +1,14 @@
 import "./PlantDetails.css"
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getPlantTypeById } from "../../services/plantService";
 import "./Plant.css"
 
-function PlantDetails() {
+function PlantDetails({ currentUser }) {
     const [plant, setPlant] = useState({})
     const { id } = useParams()
 
-   
+    const navigate = useNavigate()
 
     useEffect(() => {
         getPlantTypeById(id).then((data) => {
@@ -33,6 +33,14 @@ function PlantDetails() {
         console.log("Image fialed to load, showing default")
         e.target.onerror = null;
         e.target.src = "https://static.vecteezy.com/system/resources/previews/011/839/326/non_2x/tree-planting-icon-sapling-icon-and-illustration-vector.jpg"
+    }
+
+    const handleBackButton = () => navigate(-1)
+
+    // if user created the plant, display a button that navigates to the plant edit view
+
+    const navToEditPlant = () => {
+            navigate(`/plants/edit-plant/${plant.id}`)
     }
 
     return (
@@ -99,6 +107,10 @@ function PlantDetails() {
                     : ""}
                     </div>
                 </div>
+                <div className="plant-details-buttons">
+                    {currentUser.id === plant.creatorId ? <button onClick={navToEditPlant}>Edit</button> : ""}
+                    <button onClick={handleBackButton}>Back</button>
+                </div>                                    
             </section>
         </div>
     )

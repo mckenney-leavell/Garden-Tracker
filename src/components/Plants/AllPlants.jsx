@@ -51,25 +51,6 @@ function AllPlants( {currentUser } ) {
     }
   }, [allPlants, getSearchInput, selectedTopic])
 
-  // useEffect(() => {
-  //   if (getSearchInput.length > 0) {
-  //       console.log("Plant type selected")
-  //       const filteredByPlantType = allPlants.filter((plant) => 
-  //         plant.plantTypeId === parseInt(selectedTopic)
-  //       )
-  //       const foundPlants = filteredByPlantType.filter((plant) =>
-  //         plant.name?.toLowerCase().includes(getSearchInput.toLowerCase())
-  //       )
-  //       setFilteredPlants(foundPlants)
-  //   } else if (Number.isInteger(parseInt(selectedTopic))) {
-  //     const filteredByPlantType = allPlants.filter((plant) => 
-  //         plant.plantTypeId === parseInt(selectedTopic))
-  //     setFilteredPlants(filteredByPlantType)
-  //   } else {
-  //     setFilteredPlants(allPlants)
-  //   }
-  // }, [allPlants, selectedTopic])
-
   return (
     <div className="plants-container">
       <h1 className="title">All Plants</h1>

@@ -33,7 +33,7 @@ function ApplicationViews() {
             >
                 <Route index element={<AllPlants currentUser={currentUser}/>} />
                 <Route path="plants">
-                    <Route path="plant-details/:id" element={<PlantDetails />} />
+                    <Route path="plant-details/:id" element={<PlantDetails currentUser={currentUser}/>} />
                     <Route path="edit-plant/:id" element={<EditPlant />} />
                 </Route>
                 <Route path="my-garden" element={<MyGarden currentUser={currentUser} />} />
