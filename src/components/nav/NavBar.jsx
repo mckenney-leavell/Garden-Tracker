@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom"
 import "./Navbar.css"
 
 function NavBar() {
@@ -25,41 +25,41 @@ function NavBar() {
 				/>
 			</div>
 			<div className="navbar-item">
-				<Link
+				<NavLink
 					to="/"
-					
+					className="main"
 				>
 					All Plants
-				</Link>
+				</NavLink>
 			</div>
 			<div className="navbar-item">
-				<Link
+				<NavLink
 					to="/my-garden"
-					
+					className="main"
 				>
 					My Garden
-				</Link>
+				</NavLink>
 			</div>
 			<div className="navbar-item">
-				<Link
+				<NavLink
 					to="/create"
+					className="main"
 				>
 					Create Plant
-				</Link>
+				</NavLink>
 			</div>
 			<div className="navbar-item navbar-right">
 				<button
 					to="/profile"
 					onClick={profileNav}
 					className="fa fa-user-circle profile"
-				>
-				</button>
-				<Link 
-					className="text-only"
+				/>
+				<NavLink 
+					className="main text-only"
 					to="/profile"
 					onClick={profileNav}>
 					Profile
-				</Link>
+				</NavLink>
 			</div>
 			{localStorage.getItem("plant_user") ? (
 				<div className="navbar-item sign-out">
@@ -70,9 +70,8 @@ function NavBar() {
 							navigate("/", { replace: true })
 						}}
 						className="fa fa-sign-out"
-					>
-					</button>
-					<Link 
+					/>
+					<NavLink 
 						className="text-only"
 						to=""
 						onClick={() => {
@@ -80,7 +79,7 @@ function NavBar() {
 							navigate("/", { replace: true })
 						}}>
 						Sign Out
-					</Link>
+					</NavLink>
 				</div>	
 			) : (
 				""

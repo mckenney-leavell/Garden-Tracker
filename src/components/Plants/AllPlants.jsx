@@ -47,7 +47,10 @@ function AllPlants( {currentUser } ) {
         )
         setFilteredPlants(foundPlants)
     } else {
-      setFilteredPlants(allPlants)
+      const allPlantsAlphaOrder = allPlants.sort((a, b) => {
+        return a.name.localeCompare(b.name)
+      })
+      setFilteredPlants(allPlantsAlphaOrder)
     }
   }, [allPlants, getSearchInput, selectedTopic])
 

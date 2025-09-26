@@ -2,26 +2,40 @@
     box-sizing: border-box;
 }
 
-
-
 #nav-bar {
     display: flex;
     flex-wrap: nowrap;
-    background-color: white;
+    background-color: whitesmoke;
     margin: 0;
     width: 100%;
     padding: 0.5rem;
     position: sticky;
     top: 0;
+    box-shadow: 5px 7px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-item {
+    margin: .5rem;
+    align-content: center;
+    color: black;    
+}
+
+.main {    
     flex-shrink: 1;
     list-style-type: none;
     text-align: center;
-    color: var(--offWhite);
-    align-content: center;
-    padding: .5rem;
+    padding: 10px;
+
+}
+
+.main.active {
+    background-color: #373D20;
+    /* background-color: 30%; */
+    border: transparent;
+    border-width: 1px;
+    border-radius: 8px;
+    /* color: white; */
+    color: white
 }
 
 .navbar-item a {
@@ -39,7 +53,7 @@
 }
 
 .home-button {
-    background-color: white;
+    background-color: none;
     color: #373D20;
     font-size: 20px;
 }
@@ -102,5 +116,14 @@
 
     button {
         background-color: none;
+    }
+
+    .navbar-right {
+        margin: 8px
+    }
+
+    .main.active {
+        padding: ;
+        border: none;
     }
 }
