@@ -3,7 +3,7 @@
 import "../Form.css"
 import { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
-import { createPlantService, plantTypeService } from "../../services/plantService";
+import { createPlantService, plantTypeService, savePlantToGarden } from "../../services/plantService";
 import "react-datepicker/dist/react-datepicker.css"
 import { useNavigate } from "react-router-dom";
 
@@ -36,12 +36,26 @@ function CreatePlant( {currentUser} ) {
         })
     }, [])
 
+    const handleSaveToGarden = (newPlantObjId) => {
+        const savedPlant = {
+            plantId: newPlantObjId,
+            userId: plantObj.creatorId
+        }
+
+        savePlantToGarden(savedPlant).then(() => {
+            console.log("Plant Saved: ", savedPlant)
+            // getAndSetAllPlants()
+        })
+    }
+
     const handleSavePlant = (event) => {
         event.preventDefault()
 
         if (plantObj.name && plantObj.plantTypeId && plantObj.imageURL) {
-            createPlantService(plantObj).then(() => {
+            createPlantService(plantObj).then((newPlant) => {
+                handleSaveToGarden(newPlant.id)
                 navigate("/profile")
+                
             })
 
         } else {
@@ -175,7 +189,7 @@ function CreatePlant( {currentUser} ) {
                 </fieldset> 
                 <fieldset>
                     <button onClick={handleSavePlant}>Save Plant</button>
-                </fieldset>                                     
+                </fieldset> 
             </div>    
         </form>
     )

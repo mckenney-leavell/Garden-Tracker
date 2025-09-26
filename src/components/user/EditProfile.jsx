@@ -58,7 +58,7 @@ function EditProfile({ currentUser }) {
           />
         </fieldset>
         <fieldset>
-          <button onClick={handleSave}>Save Changes</button>
+          <button onClick={handleSave}>Save</button>
         </fieldset>
       </div>
     </form>

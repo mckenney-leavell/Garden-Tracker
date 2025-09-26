@@ -75,10 +75,16 @@
     margin-left: 2rem;
 }
 
-/* .outdoor-dates {
-    display: block;
+.plant-details-buttons {
+    display: flex;
+    flex: wrap;
     justify-content: center;
-} */
+}
+
+.plant-details-buttons > * {
+    max-width: 75px;
+    margin: 1rem;
+}
 
 @media screen and (max-width: 600px) {
     .plant-details-image {
