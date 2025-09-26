@@ -19,11 +19,17 @@ function SavedPlant({ plant, getAndSetSavedPlants }) {
         })
     }
 
+    const renderDefaultImage = (e) => {
+        console.log("Image fialed to load, showing default")
+        e.target.onerror = null;
+        e.target.src = "https://static.vecteezy.com/system/resources/previews/011/839/326/non_2x/tree-planting-icon-sapling-icon-and-illustration-vector.jpg"
+    }
+
     return (
         <section className="plant">
             <Link to={`/plants/plant-details/${plant.plantId}`} >
                 <div className="plant-image">
-                    <img src={plant.plant.imageURL} alt={plant.plant.name}/>
+                    <img src={plant.plant.imageURL} alt={plant.plant.name} onError={renderDefaultImage} />
                 </div>
             </Link>
             <div className="plant-info">

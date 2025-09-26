@@ -9,6 +9,7 @@
     display: inline-flex;
     margin: auto;
     width: 90%;
+    height: 60vh;
 }
 
 .profile-content > * {
@@ -18,19 +19,17 @@
 .profile-info {
     display: flex;
     flex-direction: column;
-    text-align: left;
-    justify-content: left;
-    max-height: 60vh;
-    padding: 3rem;
+    justify-content: center; 
+    
+    padding: 2.5rem;
     width: 60%;    
     background-color: whitesmoke;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
 }
 
 .profile-info > * {
-    margin: 1.5rem;
+    margin: 1rem;
 }
 
 .profile-info > h1 {
@@ -40,6 +39,7 @@
 .profile-info button {
     max-width: 110px;
     margin-top: 1rem;
+    align-self: center;
 }
 
 .created-plants-header {
@@ -72,22 +72,25 @@
 
 @media screen and (max-width: 600px) {
 
+    #profile {
+        margin: 2rem auto;
+    }
+
     .profile-content {
+        display: flex;
         flex-direction: column;
         justify-content: center;
+        flex: wrap;
+        height: 100%;
+        
     }
 
     .profile-content > * {
-        margin: 1rem;
+        margin: auto;
     }
 
     .profile-info {
-        display: flex;
-        flex-direction: column;
-        text-align: center; 
-        width: 100%;
-        margin: 1rem auto;
-        max-height: 100%;
+        width: 100%
     }
 
     .profile-info button {
@@ -106,11 +109,14 @@
 
     .created-plants {
         max-width: 100%;
+        margin: 2rem;
     }
 
     .created-plants > .plants {
-        justify-content: center;
+        justify-content: center;       
         max-height: 100%;
+        overflow-y: visible;
+
     }
 
 }

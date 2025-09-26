@@ -50,34 +50,35 @@ function Profile({ currentUser }) {
   }, [createdPlants, getSearchInput])
 
     return (
-        <div id="profile">           
-            
+        <div id="profile">                       
             <div className="profile-content">
-            <div className="profile-info">
-                <h1>My Profile</h1>
-                <h2>Profile Information</h2>
-                <div className="profile-name-email">
-                    <div>Name: {user.name}</div>
-                    <div>Email: {user.email}</div>
+                <div className="profile-info">
+                    <h1>My Profile</h1>
+                    <div>
+                        <h2>Profile Information</h2>
+                        <div className="profile-name-email">
+                            <div>Name: {user.name}</div>
+                            <div>Email: {user.email}</div>
+                        </div>
+                    </div>
+                    <button onClick={navEditProfile}>Edit Profile</button>
                 </div>
-                <button onClick={navEditProfile}>Edit Profile</button>
-            </div>
-            <div className="created-plants">
-                {createdPlants.length > 0 ?  
-                    <>
-                        <div className="created-plants-header">
-                            <h2>Created Plants</h2> 
-                                        
-                            <SearchBar getSearchInput={getSearchInput} setSearchInput={setSearchInput}/>
-                        </div>
-                        <div className="plants">
-                            {filteredPlants.map((plant) => {
-                                return <UserCreatedPlants plant={plant} key={plant.id} getAndSetCreatedPlants={getAndSetCreatedPlants}/>
-                            })}               
-                        </div>
-                    </>
-                : ""}
-            </div>
+                <div className="created-plants">
+                    {createdPlants.length > 0 ?  
+                        <>
+                            <div className="created-plants-header">
+                                <h2>Created Plants</h2> 
+                                            
+                                <SearchBar getSearchInput={getSearchInput} setSearchInput={setSearchInput}/>
+                            </div>
+                            <div className="plants">
+                                {filteredPlants.map((plant) => {
+                                    return <UserCreatedPlants plant={plant} key={plant.id} getAndSetCreatedPlants={getAndSetCreatedPlants}/>
+                                })}               
+                            </div>
+                        </>
+                    : ""}
+                </div>
             </div>
         </div>
     )
