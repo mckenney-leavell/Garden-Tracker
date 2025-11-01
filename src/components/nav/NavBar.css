@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+#nav-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: whitesmoke;
+    margin: 0;
+    width: 100%;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+    box-shadow: 5px 7px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-item {
+    margin: .5rem;
+    align-content: center;
+    color: black;    
+}
+
+.main {    
+    flex-shrink: 1;
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.main.active {
+    background-color: #373D20;
+    /* background-color: 30%; */
+    border: transparent;
+    border-width: 1px;
+    border-radius: 8px;
+    /* color: white; */
+    color: white
+}
+
+.navbar-item a {
+    color: var(--offWhite);
+}
+
+.navbar-link {
+    text-decoration: none;
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 1px;
+}
+
+.navbar-link:hover {
+    color: var(--primary);
+}
+
+.home-button {
+    background-color: none;
+    color: #373D20;
+    font-size: 20px;
+}
+
+.navbar-right {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.fa {
+    width: 2rem;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+.icon-only {
+    display: inline;
+}
+
+.text-only {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-item:not(:first-child) {display: none;}
+
+    .navbar .icon {
+        margin-left: auto;
+        display: block;
+    }
+    .navbar.responsive {
+        /* position: relative; */
+        flex-direction: column;
+    }
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0.5rem;
+        top: .5rem;
+    }
+
+    .navbar.responsive .navbar-item {
+        display: block;
+        width: 100%;
+    }
+
+    .navbar.responsive .profile {
+        display: none;
+    }
+
+    .navbar.responsive .fa-sign-out {
+        display: none;
+    }    
+    
+    .navbar.responsive .text-only {
+        display: inline;
+    }
+
+    button {
+        background-color: none;
+    }
+
+    .navbar-right {
+        margin: 8px
+    }
+
+    .main.active {
+        padding: ;
+        border: none;
+    }
+}

@@ -1,0 +1,10 @@
+.filter-bar {
+    display: flex;
+    flex: wrap;
+    justify-content: center;  
+    align-content: center;
+}
+
+.dropdown {
+    margin: auto
+}

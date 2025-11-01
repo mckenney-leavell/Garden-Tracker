@@ -1,0 +1,743 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "jdoe64@email.org"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Wilson",
+      "email": "swilson@email.com"
+    },
+    {
+      "id": 3,
+      "name": "Mike Chen",
+      "email": "mchen88@email.com"
+    },
+    {
+      "id": 4,
+      "name": "Emma Rodriguez",
+      "email": "erodriguez@email.com"
+    },
+    {
+      "id": 5,
+      "name": "David Thompson",
+      "email": "dthompson22@email.com"
+    },
+    {
+      "email": "maleavell@gmail.com",
+      "name": "McKenney",
+      "id": 6
+    },
+    {
+      "email": "d@d.com",
+      "name": "dave",
+      "id": 7
+    }
+  ],
+  "plants": [
+    {
+      "name": "Carrot",
+      "plantTypeId": 1,
+      "earliestIndoorStartDate": "",
+      "latestIndoorStartDate": "",
+      "springEarliestOutdoorStartDate": "2025-03-20",
+      "springLatestOutdoorStartDate": "2025-04-03",
+      "fallEarliestOutdoorStartDate": "2025-08-16",
+      "fallLatestOutdoorStartDate": "2025-08-23",
+      "lastDateToPlant": "2025-08-23",
+      "averageDaysToMature": 70,
+      "useStart": false,
+      "companionPlants": "",
+      "imageURL": "https://www.almanac.com/sites/default/files/users/The%20Editors/carrots-table_popidar-ss_quarter_width.jpg",
+      "creatorId": 1,
+      "id": 1
+    },
+    {
+      "name": "Corn",
+      "plantTypeId": 1,
+      "earliestIndoorStartDate": "",
+      "latestIndoorStartDate": "",
+      "springEarliestOutdoorStartDate": "2025-05-01",
+      "springLatestOutdoorStartDate": "2025-05-15",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "2025-08-16",
+      "averageDaysToMature": 70,
+      "useStart": false,
+      "companionPlants": "",
+      "imageURL": "https://www.almanac.com/sites/default/files/styles/or/public/image_nodes/corn-1605664_1920.jpg?itok=uXpIrXPG",
+      "creatorId": 1,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Green Beans",
+      "plantTypeId": 1,
+      "earliestIndoorStartDate": "",
+      "latestIndoorStartDate": "",
+      "springEarliestOutdoorStartDate": "2025-04-24",
+      "springLatestOutdoorStartDate": "2025-05-15",
+      "fallEarliestOutdoorStartDate": "2025-08-16",
+      "fallLatestOutdoorStartDate": "2025-08-30",
+      "lastDateToPlant": "2025-08-23",
+      "averageDaysToMature": 55,
+      "useStart": false,
+      "companionPlants": "",
+      "imageURL": "https://cdn11.bigcommerce.com/s-tjrce8etun/content/green-beans-banner.jpg",
+      "creatorId": 4
+    },
+    {
+      "id": 4,
+      "name": "Zucchini",
+      "plantTypeId": 1,
+      "earliestIndoorStartDate": "2025-03-27",
+      "latestIndoorStartDate": "2025-04-03",
+      "springEarliestOutdoorStartDate": "2025-05-01",
+      "springLatestOutdoorStartDate": "2025-05-08",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "2025-08-30",
+      "averageDaysToMature": 60,
+      "useStart": false,
+      "companionPlants": "",
+      "imageURL": "https://makkelijke-moestuin-staging.s3.eu-west-1.amazonaws.com/41150/responsive-images/courgette-oogsten___media_library_original_588_588.jpg",
+      "creatorId": null
+    },
+    {
+      "id": 5,
+      "name": "Tomato",
+      "plantTypeId": 1,
+      "earliestIndoorStartDate": "2025-02-15",
+      "latestIndoorStartDate": "2025-03-05",
+      "springEarliestOutdoorStartDate": "",
+      "springLatestOutdoorStartDate": "",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "2025-08-02",
+      "averageDaysToMature": 80,
+      "useStart": true,
+      "companionPlants": "",
+      "imageURL": "https://bonnieplants.com/cdn/shop/articles/BONNIE_tomatoes_iStock-481349128-1800px_d5820803-320c-401d-a55c-92df3c204962.jpg?v=1753293158&width=1000",
+      "creatorId": null
+    },
+    {
+      "id": 6,
+      "name": "Basil",
+      "plantTypeId": 2,
+      "earliestIndoorStartDate": "2025-03-01",
+      "latestIndoorStartDate": "2025-04-15",
+      "springEarliestOutdoorStartDate": "2025-05-15",
+      "springLatestOutdoorStartDate": "2025-06-30",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "2025-07-15",
+      "averageDaysToMature": 60,
+      "useStart": true,
+      "companionPlants": "tomatoes, peppers",
+      "imageURL": "https://www.earlmay.com/site/product-images/909_media.BasilItalianLargeLeaf.default.jpg",
+      "creatorId": null
+    },
+    {
+      "id": 7,
+      "name": "Oregano",
+      "plantTypeId": 2,
+      "earliestIndoorStartDate": "2025-02-20",
+      "latestIndoorStartDate": "2025-03-20",
+      "springEarliestOutdoorStartDate": "2025-04-01",
+      "springLatestOutdoorStartDate": "2025-05-15",
+      "fallEarliestOutdoorStartDate": "2025-08-15",
+      "fallLatestOutdoorStartDate": "2025-09-15",
+      "lastDateToPlant": "2025-09-15",
+      "averageDaysToMature": 90,
+      "useStart": false,
+      "companionPlants": "cabbage, broccoli",
+      "imageURL": "https://images.squarespace-cdn.com/content/v1/5c6f81f08155121249a4088c/228ee91f-52a1-4f84-8342-df8fc31c9e5e/FullSizeRender_VSCO+3.JPG",
+      "creatorId": null
+    },
+    {
+      "id": 8,
+      "name": "Cilantro",
+      "plantTypeId": 2,
+      "earliestIndoorStartDate": "2025-03-15",
+      "latestIndoorStartDate": "2025-04-01",
+      "springEarliestOutdoorStartDate": "2025-04-15",
+      "springLatestOutdoorStartDate": "2025-05-30",
+      "fallEarliestOutdoorStartDate": "2025-08-01",
+      "fallLatestOutdoorStartDate": "2025-09-30",
+      "lastDateToPlant": "2025-09-30",
+      "averageDaysToMature": 45,
+      "useStart": false,
+      "companionPlants": "carrots, spinach",
+      "imageURL": "https://images.squarespace-cdn.com/content/v1/52cdaaf4e4b0b5ef88cb0b93/1405454449726-QC572T2IXMFGFESXLVEF/image-asset.png",
+      "creatorId": null
+    },
+    {
+      "id": 9,
+      "name": "Marigold",
+      "plantTypeId": 3,
+      "earliestIndoorStartDate": "2025-03-15",
+      "latestIndoorStartDate": "2025-04-15",
+      "springEarliestOutdoorStartDate": "2025-05-01",
+      "springLatestOutdoorStartDate": "2025-06-15",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "2025-07-01",
+      "averageDaysToMature": 50,
+      "useStart": false,
+      "companionPlants": "tomatoes, peppers, squash",
+      "imageURL": "https://www.gardenia.net/wp-content/uploads/2023/03/3FRlpIgMVCT7oLiam12OSQfgFFf7tmvJEAqeJvmD-1.webp",
+      "creatorId": 2
+    },
+    {
+      "id": 10,
+      "name": "Black-Eyed Susan",
+      "plantTypeId": 3,
+      "earliestIndoorStartDate": "2025-02-01",
+      "latestIndoorStartDate": "2025-03-01",
+      "springEarliestOutdoorStartDate": "2025-04-15",
+      "springLatestOutdoorStartDate": "2025-06-30",
+      "fallEarliestOutdoorStartDate": "2025-08-15",
+      "fallLatestOutdoorStartDate": "2025-10-01",
+      "lastDateToPlant": "2025-10-01",
+      "averageDaysToMature": 120,
+      "useStart": true,
+      "companionPlants": "purple coneflower, bee balm",
+      "imageURL": "https://howsweetgarden.com/wp-content/uploads/2024/04/Black-eyed-Susan-Rudbeckia__69529.jpg",
+      "creatorId": 1
+    },
+    {
+      "id": 11,
+      "name": "Zinnia",
+      "plantTypeId": 3,
+      "earliestIndoorStartDate": "2025-04-01",
+      "latestIndoorStartDate": "2025-05-01",
+      "springEarliestOutdoorStartDate": "2025-05-15",
+      "springLatestOutdoorStartDate": "2025-07-15",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "2025-07-15",
+      "averageDaysToMature": 70,
+      "useStart": false,
+      "companionPlants": "cosmos, sunflowers",
+      "imageURL": "https://hgtvhome.sndimg.com/content/dam/images/grdn/fullset/2013/3/5/0/0514_074.jpg.rend.hgtvcom.1280.960.85.suffix/1452644567362.webp",
+      "creatorId": null
+    },
+    {
+      "id": 13,
+      "name": "Cucumber",
+      "plantTypeId": 1,
+      "earliestIndoorStartDate": "2025-04-15",
+      "latestIndoorStartDate": "2025-05-01",
+      "springEarliestOutdoorStartDate": "2025-05-15",
+      "springLatestOutdoorStartDate": "2025-06-15",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "2025-07-15",
+      "averageDaysToMature": 55,
+      "useStart": false,
+      "companionPlants": "beans, peas, radishes",
+      "imageURL": "https://thisismygarden.com/wp-content/uploads/2024/07/keep-cucumber-plants-productive-1024x1024.jpg.webp",
+      "creatorId": 3
+    },
+    {
+      "id": 14,
+      "name": "Bell Pepper",
+      "plantTypeId": 1,
+      "earliestIndoorStartDate": "2025-03-01",
+      "latestIndoorStartDate": "2025-03-20",
+      "springEarliestOutdoorStartDate": "2025-05-15",
+      "springLatestOutdoorStartDate": "2025-06-01",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "2025-07-01",
+      "averageDaysToMature": 75,
+      "useStart": true,
+      "companionPlants": "basil, tomatoes, onions",
+      "imageURL": "https://hips.hearstapps.com/hmg-prod/images/how-to-grow-bell-peppers-662134a4a6399.jpg",
+      "creatorId": 1
+    },
+    {
+      "id": 15,
+      "name": "Spinach",
+      "plantTypeId": 1,
+      "earliestIndoorStartDate": "",
+      "latestIndoorStartDate": "",
+      "springEarliestOutdoorStartDate": "2025-03-15",
+      "springLatestOutdoorStartDate": "2025-05-01",
+      "fallEarliestOutdoorStartDate": "2025-08-15",
+      "fallLatestOutdoorStartDate": "2025-09-15",
+      "lastDateToPlant": "2025-09-15",
+      "averageDaysToMature": 40,
+      "useStart": false,
+      "companionPlants": "strawberries, peas, beans",
+      "imageURL": "https://bonnieplants.com/cdn/shop/articles/BONNIE-PLANTS_spinach_iStock-915250154-1800px_87cee462-3671-4697-98ef-3007d29145e9.jpg?v=1642541976",
+      "creatorId": 4
+    },
+    {
+      "id": 16,
+      "name": "Radish",
+      "plantTypeId": 1,
+      "earliestIndoorStartDate": "",
+      "latestIndoorStartDate": "",
+      "springEarliestOutdoorStartDate": "2025-03-20",
+      "springLatestOutdoorStartDate": "2025-05-15",
+      "fallEarliestOutdoorStartDate": "2025-08-15",
+      "fallLatestOutdoorStartDate": "2025-09-15",
+      "lastDateToPlant": "2025-09-15",
+      "averageDaysToMature": 25,
+      "useStart": false,
+      "companionPlants": "lettuce, carrots, cucumbers",
+      "imageURL": "https://gardenerspath.com/wp-content/uploads/2023/05/Red-Radishes-Growing-in-the-Garden.jpg",
+      "creatorId": 2
+    },
+    {
+      "id": 17,
+      "name": "Peas",
+      "plantTypeId": 1,
+      "earliestIndoorStartDate": "",
+      "latestIndoorStartDate": "",
+      "springEarliestOutdoorStartDate": "2025-03-15",
+      "springLatestOutdoorStartDate": "2025-04-30",
+      "fallEarliestOutdoorStartDate": "2025-08-01",
+      "fallLatestOutdoorStartDate": "2025-08-20",
+      "lastDateToPlant": "2025-08-20",
+      "averageDaysToMature": 60,
+      "useStart": false,
+      "companionPlants": "carrots, turnips, radishes",
+      "imageURL": "https://sarabackmo.com/wp-content/uploads/2017/06/skillnadenstradgard_arter_sockerarter-1070x713.jpg",
+      "creatorId": 1
+    },
+    {
+      "id": 18,
+      "name": "Broccoli",
+      "plantTypeId": 1,
+      "earliestIndoorStartDate": "2025-02-15",
+      "latestIndoorStartDate": "2025-03-15",
+      "springEarliestOutdoorStartDate": "2025-04-01",
+      "springLatestOutdoorStartDate": "2025-05-01",
+      "fallEarliestOutdoorStartDate": "2025-07-15",
+      "fallLatestOutdoorStartDate": "2025-08-15",
+      "lastDateToPlant": "2025-08-15",
+      "averageDaysToMature": 65,
+      "useStart": true,
+      "companionPlants": "onions, beets, potatoes",
+      "imageURL": "https://gardenary-data.s3.amazonaws.com/og/uMiCK9r7itWEZEG2nH0ImvlohNK0uQK7nk1Of3ev.jpg",
+      "creatorId": 3
+    },
+    {
+      "id": 19,
+      "name": "Kale",
+      "plantTypeId": 1,
+      "earliestIndoorStartDate": "2025-03-01",
+      "latestIndoorStartDate": "2025-03-20",
+      "springEarliestOutdoorStartDate": "2025-03-20",
+      "springLatestOutdoorStartDate": "2025-05-15",
+      "fallEarliestOutdoorStartDate": "2025-07-15",
+      "fallLatestOutdoorStartDate": "2025-08-30",
+      "lastDateToPlant": "2025-08-30",
+      "averageDaysToMature": 55,
+      "useStart": false,
+      "companionPlants": "onions, herbs, beets",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQghmF1Hv_qvxPjsUZnDUHB2NpKXx7KE0G9xw&s",
+      "creatorId": 4
+    },
+    {
+      "id": 20,
+      "name": "Lettuce",
+      "plantTypeId": 1,
+      "earliestIndoorStartDate": "2025-03-01",
+      "latestIndoorStartDate": "2025-03-20",
+      "springEarliestOutdoorStartDate": "2025-04-01",
+      "springLatestOutdoorStartDate": "2025-05-15",
+      "fallEarliestOutdoorStartDate": "2025-08-01",
+      "fallLatestOutdoorStartDate": "2025-09-01",
+      "lastDateToPlant": "2025-09-01",
+      "averageDaysToMature": 50,
+      "useStart": false,
+      "companionPlants": "chives, carrots, beets",
+      "imageURL": "https://www.marthastewart.com/thmb/mO0h3lFClXzoEZ_gxnHUGV43lLs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-to-grow-lettuce-getty-5348e204ce4948808dc6e88c7d7b2379.jpg",
+      "creatorId": 1
+    },
+    {
+      "id": 21,
+      "name": "Parsley",
+      "plantTypeId": 2,
+      "earliestIndoorStartDate": "2025-02-15",
+      "latestIndoorStartDate": "2025-03-15",
+      "springEarliestOutdoorStartDate": "2025-04-15",
+      "springLatestOutdoorStartDate": "2025-05-30",
+      "fallEarliestOutdoorStartDate": "2025-08-01",
+      "fallLatestOutdoorStartDate": "2025-09-01",
+      "lastDateToPlant": "2025-09-01",
+      "averageDaysToMature": 70,
+      "useStart": true,
+      "companionPlants": "tomatoes, asparagus, corn",
+      "imageURL": "https://bonnieplants.com/cdn/shop/articles/BONNIE_parsley_iStock-92002655-1800px_f08318d5-b02f-4f1e-9bf7-f414c552cbdc.jpg?v=1642541972",
+      "creatorId": 2
+    },
+    {
+      "id": 22,
+      "name": "Dill",
+      "plantTypeId": 2,
+      "earliestIndoorStartDate": "2025-03-15",
+      "latestIndoorStartDate": "2025-04-01",
+      "springEarliestOutdoorStartDate": "2025-04-15",
+      "springLatestOutdoorStartDate": "2025-06-01",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "2025-07-15",
+      "averageDaysToMature": 40,
+      "useStart": false,
+      "companionPlants": "cucumbers, lettuce, onions",
+      "imageURL": "https://hips.hearstapps.com/hmg-prod/images/fresh-organic-dill-royalty-free-image-1748627495.pjpeg?crop=0.668xw:1.00xh;0.0918xw,0&resize=1200:*",
+      "creatorId": 3
+    },
+    {
+      "id": 23,
+      "name": "Chives",
+      "plantTypeId": 2,
+      "earliestIndoorStartDate": "2025-02-15",
+      "latestIndoorStartDate": "2025-03-15",
+      "springEarliestOutdoorStartDate": "2025-03-15",
+      "springLatestOutdoorStartDate": "2025-05-01",
+      "fallEarliestOutdoorStartDate": "2025-08-15",
+      "fallLatestOutdoorStartDate": "2025-09-15",
+      "lastDateToPlant": "2025-09-15",
+      "averageDaysToMature": 60,
+      "useStart": true,
+      "companionPlants": "carrots, tomatoes, roses",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_0uIDjbBsJeqTiAJLVkxfZlVupVXsqZ-HYA&s",
+      "creatorId": 1
+    },
+    {
+      "id": 24,
+      "name": "Mint",
+      "plantTypeId": 2,
+      "earliestIndoorStartDate": "2025-03-01",
+      "latestIndoorStartDate": "2025-04-01",
+      "springEarliestOutdoorStartDate": "2025-04-15",
+      "springLatestOutdoorStartDate": "2025-06-01",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "2025-08-15",
+      "averageDaysToMature": 90,
+      "useStart": true,
+      "companionPlants": "cabbage, tomatoes",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXXMvgB0eYmBL-yFmEMoztEs24CDRUlb0wZQ&s",
+      "creatorId": 4
+    },
+    {
+      "id": 25,
+      "name": "Thyme",
+      "plantTypeId": 2,
+      "earliestIndoorStartDate": "2025-02-20",
+      "latestIndoorStartDate": "2025-03-20",
+      "springEarliestOutdoorStartDate": "2025-04-15",
+      "springLatestOutdoorStartDate": "2025-05-30",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "2025-09-01",
+      "averageDaysToMature": 75,
+      "useStart": true,
+      "companionPlants": "cabbage, tomatoes, eggplant",
+      "imageURL": "https://growinginthegarden.com/wp-content/uploads/2023/07/Growing-Thyme_-5-Secrets-to-Success.jpg",
+      "creatorId": 2
+    },
+    {
+      "id": 26,
+      "name": "Sage",
+      "plantTypeId": 2,
+      "earliestIndoorStartDate": "2025-02-15",
+      "latestIndoorStartDate": "2025-03-15",
+      "springEarliestOutdoorStartDate": "2025-04-15",
+      "springLatestOutdoorStartDate": "2025-05-30",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "2025-09-01",
+      "averageDaysToMature": 75,
+      "useStart": true,
+      "companionPlants": "rosemary, cabbage, carrots",
+      "imageURL": "https://bonnieplants.com/cdn/shop/articles/BONNIE_sage_iStock-664890210-1800px_f839c896-3f8b-4470-8ab8-7ebe7dd93bb2.jpg?v=1642541975",
+      "creatorId": 3
+    },
+    {
+      "id": 27,
+      "name": "Sunflower",
+      "plantTypeId": 3,
+      "earliestIndoorStartDate": "2025-04-01",
+      "latestIndoorStartDate": "2025-04-20",
+      "springEarliestOutdoorStartDate": "2025-05-01",
+      "springLatestOutdoorStartDate": "2025-06-15",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "2025-07-15",
+      "averageDaysToMature": 70,
+      "useStart": false,
+      "companionPlants": "cucumbers, squash, corn",
+      "imageURL": "https://www.moananursery.com/wp-content/uploads/2023/08/1920-x-1280-2.jpg",
+      "creatorId": 1
+    },
+    {
+      "id": 28,
+      "name": "Cosmos",
+      "plantTypeId": 3,
+      "earliestIndoorStartDate": "2025-03-20",
+      "latestIndoorStartDate": "2025-04-15",
+      "springEarliestOutdoorStartDate": "2025-05-01",
+      "springLatestOutdoorStartDate": "2025-06-15",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "2025-07-15",
+      "averageDaysToMature": 60,
+      "useStart": false,
+      "companionPlants": "zinnias, marigolds, vegetables",
+      "imageURL": "https://www.gardenia.net/wp-content/uploads/2023/05/cosmos-plant-care-and-growing-guide-780x520.webp",
+      "creatorId": 2
+    },
+    {
+      "id": 29,
+      "name": "Coneflower",
+      "plantTypeId": 3,
+      "earliestIndoorStartDate": "2025-02-15",
+      "latestIndoorStartDate": "2025-03-15",
+      "springEarliestOutdoorStartDate": "2025-04-15",
+      "springLatestOutdoorStartDate": "2025-06-30",
+      "fallEarliestOutdoorStartDate": "2025-08-15",
+      "fallLatestOutdoorStartDate": "2025-09-30",
+      "lastDateToPlant": "2025-09-30",
+      "averageDaysToMature": 90,
+      "useStart": true,
+      "companionPlants": "black-eyed susan, bee balm, russian sage",
+      "imageURL": "https://www.monrovia.com/media/amasty/blog/1024x577_Echinacea_Garden_of_Sunshine_1310MNC_1_copy.jpg",
+      "creatorId": 4
+    },
+    {
+      "id": 30,
+      "name": "Petunia",
+      "plantTypeId": 3,
+      "earliestIndoorStartDate": "2025-03-15",
+      "latestIndoorStartDate": "2025-04-15",
+      "springEarliestOutdoorStartDate": "2025-05-01",
+      "springLatestOutdoorStartDate": "2025-06-01",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "2025-07-01",
+      "averageDaysToMature": 60,
+      "useStart": true,
+      "companionPlants": "vegetables, beans, squash",
+      "imageURL": "https://kellogggarden.com/wp-content/uploads/2021/03/Growing-Petunia-Flowers.jpg",
+      "creatorId": 3
+    },
+    {
+      "id": 31,
+      "name": "Pansy",
+      "plantTypeId": 3,
+      "earliestIndoorStartDate": "2025-02-01",
+      "latestIndoorStartDate": "2025-03-01",
+      "springEarliestOutdoorStartDate": "2025-03-15",
+      "springLatestOutdoorStartDate": "2025-05-01",
+      "fallEarliestOutdoorStartDate": "2025-08-15",
+      "fallLatestOutdoorStartDate": "2025-09-30",
+      "lastDateToPlant": "2025-09-30",
+      "averageDaysToMature": 70,
+      "useStart": true,
+      "companionPlants": "violas, snapdragons",
+      "imageURL": "https://www.marthastewart.com/thmb/Ic5I3fY22qSJVFjNiIFGK1p2Yzo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-to-grow-care-petunias-0622-28095108a9b44662b958c1fa7f3efa93.jpg",
+      "creatorId": 1
+    },
+    {
+      "id": 32,
+      "name": "Snapdragon",
+      "plantTypeId": 3,
+      "earliestIndoorStartDate": "2025-02-15",
+      "latestIndoorStartDate": "2025-03-15",
+      "springEarliestOutdoorStartDate": "2025-04-01",
+      "springLatestOutdoorStartDate": "2025-05-15",
+      "fallEarliestOutdoorStartDate": "2025-08-15",
+      "fallLatestOutdoorStartDate": "2025-09-15",
+      "lastDateToPlant": "2025-09-15",
+      "averageDaysToMature": 60,
+      "useStart": true,
+      "companionPlants": "pansies, petunias",
+      "imageURL": "https://gardenerspath.com/wp-content/uploads/2025/05/How-to-Grow-Snapdragon-Flowers.jpg",
+      "creatorId": 2
+    },
+    {
+      "id": 33,
+      "name": "Impatiens",
+      "plantTypeId": 3,
+      "earliestIndoorStartDate": "2025-03-15",
+      "latestIndoorStartDate": "2025-04-15",
+      "springEarliestOutdoorStartDate": "2025-05-15",
+      "springLatestOutdoorStartDate": "2025-06-15",
+      "fallEarliestOutdoorStartDate": "",
+      "fallLatestOutdoorStartDate": "",
+      "lastDateToPlant": "2025-07-15",
+      "averageDaysToMature": 70,
+      "useStart": true,
+      "companionPlants": "hostas, ferns, begonias",
+      "imageURL": "https://www.marthastewart.com/thmb/6wwaWgCHvFwkixOFQJ-etfBnZak=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/new-guinea-impatiens-getty-0620-2000-aa0196d510964aee923a6d258e1644a3.jpg",
+      "creatorId": 4
+    }
+  ],
+  "plantTypes": [
+    {
+      "id": 1,
+      "type": "Vegetable"
+    },
+    {
+      "id": 2,
+      "type": "Herb"
+    },
+    {
+      "id": 3,
+      "type": "Flower"
+    }
+  ],
+  "savedPlant": [
+    {
+      "id": 2,
+      "plantId": 6,
+      "userId": 2
+    },
+    {
+      "plantId": 6,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "plantId": 5,
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "plantId": 2,
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "plantId": 3,
+      "userId": 7,
+      "id": 11
+    },
+    {
+      "plantId": 9,
+      "userId": 7,
+      "id": 12
+    },
+    {
+      "plantId": 4,
+      "userId": 7,
+      "id": 13
+    },
+    {
+      "plantId": 10,
+      "userId": 1,
+      "id": 15
+    },
+    {
+      "plantId": 4,
+      "userId": 1,
+      "id": 16
+    },
+    {
+      "plantId": 3,
+      "userId": 1,
+      "id": 17
+    }
+  ],
+  "plantingSeason": [
+    {
+      "id": 1,
+      "season": "Spring"
+    },
+    {
+      "id": 2,
+      "season": "Fall"
+    }
+  ],
+  "assignedPlantingSeason": [
+    {
+      "id": 1,
+      "plantingSeasonId": 1,
+      "plantId": 1
+    },
+    {
+      "id": 2,
+      "plantingSeasonId": 2,
+      "plantId": 1
+    },
+    {
+      "id": 3,
+      "plantingSeasonId": 1,
+      "plantId": 2
+    },
+    {
+      "id": 4,
+      "plantingSeasonId": 1,
+      "plantId": 3
+    },
+    {
+      "id": 5,
+      "plantingSeasonId": 2,
+      "plantId": 3
+    },
+    {
+      "id": 6,
+      "plantingSeasonId": 1,
+      "plantId": 4
+    },
+    {
+      "id": 7,
+      "plantingSeasonId": 1,
+      "plantId": 5
+    },
+    {
+      "id": 8,
+      "plantingSeasonId": 1,
+      "plantId": 6
+    },
+    {
+      "id": 9,
+      "plantingSeasonId": 1,
+      "plantId": 7
+    },
+    {
+      "id": 10,
+      "plantingSeasonId": 2,
+      "plantId": 7
+    },
+    {
+      "id": 11,
+      "plantingSeasonId": 1,
+      "plantId": 8
+    },
+    {
+      "id": 12,
+      "plantingSeasonId": 2,
+      "plantId": 8
+    },
+    {
+      "id": 13,
+      "plantingSeasonId": 1,
+      "plantId": 9
+    },
+    {
+      "id": 14,
+      "plantingSeasonId": 1,
+      "plantId": 10
+    },
+    {
+      "id": 15,
+      "plantingSeasonId": 2,
+      "plantId": 10
+    },
+    {
+      "id": 16,
+      "plantingSeasonId": 1,
+      "plantId": 11
+    }
+  ]
+}
