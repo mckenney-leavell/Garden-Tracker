@@ -29,7 +29,7 @@ function Login() {
     return(
         <main className="auth-container">
         <section>
-            <form className="auth-form" onSubmit={handleLogin}>
+            <form className="input-form" onSubmit={handleLogin}>
             <h1 className="header">Welcome!</h1>
             <h2>Please sign in</h2>
             <fieldset className="auth-fieldset">
@@ -50,10 +50,12 @@ function Login() {
                 <button type="submit">Sign in</button>
                 </div>
             </fieldset>
-            </form>
-        </section>
-        <section className="register-link">
-            Not registered? <Link to="/register">Register</Link>
+
+        
+            <section className="register-link">
+                Not registered? <Link to="/register">Register</Link>
+            </section>
+        </form>
         </section>
         </main>
     )

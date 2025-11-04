@@ -12,3 +12,7 @@ button {
     font-size: 14px;
     transition: background-color 0.2s;
 }
+
+.register-link {
+    margin: 2rem;
+}

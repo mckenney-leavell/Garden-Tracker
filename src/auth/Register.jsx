@@ -44,7 +44,7 @@ function Register() {
     return (
     <main style={{ textAlign: "center" }}>
         <section>
-            <form className="form-login" onSubmit={handleRegister}>
+            <form className="input-form" onSubmit={handleRegister}>
                 <h1 className="header">Welcome!</h1>
                 <h2>Please register</h2>
                 <fieldset>
@@ -79,10 +79,11 @@ function Register() {
                     </button>
                 </div>
                 </fieldset>
-            </form>
+            
             <section className="login-link">
                 <p>Already registered? <Link to="/login">Login</Link></p>
             </section>
+        </form>
         </section>
     </main>
     )

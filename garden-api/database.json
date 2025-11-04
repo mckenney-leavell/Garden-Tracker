@@ -27,13 +27,23 @@
     },
     {
       "email": "maleavell@gmail.com",
-      "name": "McKenney",
+      "name": "McKenney Leavell",
       "id": 6
     },
     {
       "email": "d@d.com",
       "name": "dave",
       "id": 7
+    },
+    {
+      "email": "email@test.com",
+      "name": "McKenney",
+      "id": 8
+    },
+    {
+      "email": "test@test.com",
+      "name": "test",
+      "id": 9
     }
   ],
   "plants": [
@@ -103,7 +113,7 @@
       "useStart": false,
       "companionPlants": "",
       "imageURL": "https://makkelijke-moestuin-staging.s3.eu-west-1.amazonaws.com/41150/responsive-images/courgette-oogsten___media_library_original_588_588.jpg",
-      "creatorId": null
+      "creatorId": 6
     },
     {
       "id": 5,
@@ -120,10 +130,9 @@
       "useStart": true,
       "companionPlants": "",
       "imageURL": "https://bonnieplants.com/cdn/shop/articles/BONNIE_tomatoes_iStock-481349128-1800px_d5820803-320c-401d-a55c-92df3c204962.jpg?v=1753293158&width=1000",
-      "creatorId": null
+      "creatorId": 6
     },
     {
-      "id": 6,
       "name": "Basil",
       "plantTypeId": 2,
       "earliestIndoorStartDate": "2025-03-01",
@@ -137,7 +146,8 @@
       "useStart": true,
       "companionPlants": "tomatoes, peppers",
       "imageURL": "https://www.earlmay.com/site/product-images/909_media.BasilItalianLargeLeaf.default.jpg",
-      "creatorId": null
+      "creatorId": 6,
+      "id": 6
     },
     {
       "id": 7,
@@ -544,7 +554,7 @@
       "averageDaysToMature": 70,
       "useStart": true,
       "companionPlants": "violas, snapdragons",
-      "imageURL": "https://www.marthastewart.com/thmb/Ic5I3fY22qSJVFjNiIFGK1p2Yzo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-to-grow-care-petunias-0622-28095108a9b44662b958c1fa7f3efa93.jpg",
+      "imageURL": "https://cdn.britannica.com/72/117272-050-B76F5F9E/Garden-pansy.jpg",
       "creatorId": 1
     },
     {
@@ -646,6 +656,46 @@
       "plantId": 3,
       "userId": 1,
       "id": 17
+    },
+    {
+      "plantId": 23,
+      "userId": 6,
+      "id": 18
+    },
+    {
+      "plantId": 10,
+      "userId": 6,
+      "id": 19
+    },
+    {
+      "plantId": 13,
+      "userId": 6,
+      "id": 20
+    },
+    {
+      "plantId": 24,
+      "userId": 6,
+      "id": 21
+    },
+    {
+      "plantId": 14,
+      "userId": 8,
+      "id": 23
+    },
+    {
+      "plantId": 23,
+      "userId": 8,
+      "id": 24
+    },
+    {
+      "plantId": 8,
+      "userId": 8,
+      "id": 25
+    },
+    {
+      "plantId": 28,
+      "userId": 8,
+      "id": 26
     }
   ],
   "plantingSeason": [
