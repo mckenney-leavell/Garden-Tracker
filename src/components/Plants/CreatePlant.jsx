@@ -44,7 +44,6 @@ function CreatePlant( {currentUser} ) {
 
         savePlantToGarden(savedPlant).then(() => {
             console.log("Plant Saved: ", savedPlant)
-            // getAndSetAllPlants()
         })
     }
 
