@@ -1,5 +1,6 @@
 {
   "name": "garden-tracker",
+  "homepage": "https://mckenney-leavell.github.io/GardenTracker/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
