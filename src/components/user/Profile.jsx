@@ -2,7 +2,7 @@ import "./Profile.css"
 import { useEffect, useState } from "react";
 import { getUserById } from "../../services/userService";
 import { allPlantService } from "../../services/plantService";
-import UserCreatedPlants from "../plants/UserPlants";
+import UserCreatedPlants from "../plants/userPlants";
 import { useNavigate } from "react-router-dom";
 import SearchBar from "../SearchBar";
 
