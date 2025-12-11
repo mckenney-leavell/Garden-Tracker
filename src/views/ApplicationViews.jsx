@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Routes, Route, Outlet } from "react-router-dom"
 import AllPlants from "../components/Plants/AllPlants";
 import NavBar from "../components/nav/NavBar";
-import { MyGarden } from "../components/plants/MyGarden";
+import { MyGarden } from "../components/plants/MyGarden.jsx";
 import CreatePlant from "../components/plants/CreatePlant";
 import Profile from "../components/user/Profile";
 import EditPlant from "../components/plants/EditPlant";
