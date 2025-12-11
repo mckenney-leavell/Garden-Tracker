@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { getPlantById, plantTypeService, updatePlantService } from "../../services/plantService";
 import { useEffect, useState } from "react";
 
-function Editplant() {
+function EditPlant() {
     const [plantObj, setPlantObj] = useState({})
     const [allTypes, setAllTypes] = useState([])
     const { id } = useParams()
@@ -201,4 +201,4 @@ function Editplant() {
     )
 }
 
-export default Editplant;
+export default EditPlant;
