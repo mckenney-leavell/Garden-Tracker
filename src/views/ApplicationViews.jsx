@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, Outlet } from "react-router-dom"
-import AllPlants from "../components/Plants/AllPlants";
+import AllPlants from "../components/plants/AllPlants";
 import NavBar from "../components/nav/NavBar";
 import { MyGarden } from "../components/plants/MyGarden.jsx";
 import CreatePlant from "../components/plants/CreatePlant";
